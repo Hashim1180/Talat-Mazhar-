@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#03010c">
+<meta name="description" content="Talat Mazhar — Courses in Sufism, Meditation, Sacred Numerology, Eschatology and Spiritual Sciences. The Inward Path.">
+<meta property="og:title" content="Talat Mazhar — The Inward Path">
+<meta property="og:description" content="Courses in Sufism, sacred sciences, meditation and spiritual transformation. Taught in Urdu & English.">
+<meta property="og:type" content="website">
+<title>Talat Mazhar — The Inward Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500&family=Jost:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#03010c;--abyss:#06031a;--depth:#0c0828;--well:#120e36;--cave:#1a1844;
+  --indigo:#2e2568;--violet:#4e3e96;--amethyst:#7b5fc8;--lilac:#a890e4;--mist:#c8b8f4;
+  --gold:#c8a84c;--gold2:#b09030;--gold3:#887018;
+  --ggl:rgba(200,168,76,.1);--gglow:rgba(200,168,76,.28);
+  --star:#f8f4ff;--ivory:#e4dcf8;--stone:#8880b8;--ash:#504870;
+  --jade:#1a9048;--ember:#c03828;
+  --s1:cubic-bezier(.19,1,.22,1);--s2:cubic-bezier(.77,0,.175,1);--s4:cubic-bezier(.34,1.56,.64,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--void);color:var(--star);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a,button{font-family:inherit}img,video{display:block;max-width:100%}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--void)}::-webkit-scrollbar-thumb{background:var(--gold)}
+::selection{background:var(--amethyst);color:var(--star)}
+@media(hover:hover){body,a,button{cursor:none}#cur{display:block}}
+@media(hover:none){#cur{display:none!important}}
+
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:9900;background:var(--void);display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:1;visibility:visible;transition:opacity .8s,visibility .8s}
+#loader.gone{opacity:0;visibility:hidden;pointer-events:none}
+.ld-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 65% at 50% 50%,rgba(46,37,104,.4) 0%,transparent 70%);animation:ldGP 3s ease-in-out infinite alternate}
+@keyframes ldGP{to{background:radial-gradient(ellipse 80% 75% at 50% 50%,rgba(78,62,150,.48) 0%,transparent 70%)}}
+.ld-stars{position:absolute;inset:0}
+.ld-ring{position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(200,168,76,.14);animation:ldSpin var(--sp,20s) linear infinite;transform:translate(-50%,-50%)}
+.ld-ring::after{content:'';position:absolute;top:-3px;left:50%;width:5px;height:5px;background:var(--gold);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--gold)}
+.r1{width:300px;height:300px;--sp:20s}.r2{width:210px;height:210px;--sp:13s;animation-direction:reverse;border-color:rgba(78,62,150,.3)}.r2::after{background:var(--amethyst)}.r3{width:136px;height:136px;--sp:8s;border-color:rgba(200,168,76,.2)}.r3::after{display:none}
+@keyframes ldSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.ld-fr{position:absolute;width:40px;height:40px;border-color:rgba(200,168,76,.4);border-style:solid}
+.ld-fr.tl{top:20px;left:20px;border-width:1px 0 0 1px}.ld-fr.tr{top:20px;right:20px;border-width:1px 1px 0 0}
+.ld-fr.bl{bottom:20px;left:20px;border-width:0 0 1px 1px}.ld-fr.br{bottom:20px;right:20px;border-width:0 1px 1px 0}
+.ld-logo{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ld-sym{font-size:clamp(34px,7vw,60px);color:var(--gold);opacity:0;animation:ldUp .5s .1s ease forwards;filter:drop-shadow(0 0 20px rgba(200,168,76,.6))}
+.ld-name{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5.5vw,54px);font-weight:300;letter-spacing:.2em;color:var(--star);opacity:0;animation:ldUp .6s .3s ease forwards;line-height:1}
+.ld-title{font-family:'Cormorant SC',serif;font-size:clamp(13px,2.5vw,22px);font-weight:300;letter-spacing:.5em;color:var(--gold);opacity:0;animation:ldUp .5s .55s ease forwards}
+.ld-orn{display:flex;align-items:center;gap:12px;width:0;overflow:hidden;animation:ldOW .6s .85s var(--s1) forwards;margin:6px 0}
+@keyframes ldOW{to{width:270px}}
+.ld-orn::before,.ld-orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.ld-gem{font-size:9px;color:var(--gold);flex-shrink:0;opacity:0;animation:ldUp .3s 1.35s ease forwards}
+.ld-sub{font-size:9px;letter-spacing:.75em;text-transform:uppercase;color:var(--ash);opacity:0;animation:ldUp .4s 1.1s ease forwards}
+@keyframes ldUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.ld-bar{position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(255,255,255,.04)}
+.ld-fill{height:2px;background:linear-gradient(90deg,transparent,var(--amethyst),var(--gold),var(--amethyst),transparent);width:0%;transition:width .055s linear;box-shadow:0 0 14px var(--amethyst)}
+.ld-pct{position:absolute;bottom:16px;right:26px;font-size:10px;letter-spacing:.3em;color:var(--ash)}
+
+/* CURSOR */
+#cur{position:fixed;inset:0;z-index:9800;pointer-events:none;overflow:hidden;display:none}
+.c-dot{position:absolute;width:5px;height:5px;background:var(--star);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s var(--s1),height .2s,background .3s}
+.c-ring{position:absolute;width:26px;height:26px;border:1px solid rgba(248,244,255,.25);border-radius:50%;transform:translate(-50%,-50%);transition:width .45s var(--s1),height .45s,border-color .3s,border-radius .3s}
+body.cH .c-dot{width:0;height:0}body.cH .c-ring{width:42px;height:42px;border-color:var(--gold);border-radius:3px}
+body.cV .c-dot{width:3px;height:3px}body.cV .c-ring{width:60px;height:60px;border-color:var(--amethyst);background:rgba(78,62,150,.08)}
+
+/* GRAIN */
+#grain{position:fixed;inset:0;z-index:9700;pointer-events:none;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23f)' opacity='0.08'/%3E%3C/svg%3E");animation:grn 8s steps(10) infinite}
+@keyframes grn{0%{transform:translate(0,0)}50%{transform:translate(1%,-1%)}100%{transform:translate(0,0)}}
+
+/* ANNOUNCEMENT */
+#ann{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(90deg,var(--depth) 0%,var(--indigo) 30%,var(--violet) 50%,var(--indigo) 70%,var(--depth) 100%);background-size:200% 100%;padding:9px 20px;text-align:center;font-size:11px;font-weight:300;letter-spacing:.38em;text-transform:uppercase;color:var(--ivory);border-bottom:1px solid rgba(200,168,76,.18);opacity:0;transition:transform .4s var(--s1),opacity .3s;animation:annS 7s 2s linear infinite,annI .5s 2s ease forwards}
+@keyframes annS{0%{background-position:0%}100%{background-position:200%}}@keyframes annI{to{opacity:1}}
+#ann.hidden{transform:translateY(-100%)}#ann a{color:var(--gold);text-decoration:none;font-weight:400}
+
+/* NAV */
+#nav{position:fixed;left:0;right:0;z-index:900;top:34px;display:flex;align-items:center;justify-content:space-between;padding:clamp(16px,2.2vw,24px) clamp(20px,4vw,60px);transition:padding .5s var(--s1),background .5s,border-color .4s,top .4s;opacity:0;animation:navI .6s 2.1s ease forwards}
+@keyframes navI{to{opacity:1}}
+#nav.stuck{padding:11px clamp(20px,4vw,60px);background:rgba(3,1,12,.96);backdrop-filter:blur(24px) saturate(1.8);border-bottom:1px solid rgba(78,62,150,.28);top:0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-sym{font-size:20px;color:var(--gold);filter:drop-shadow(0 0 6px rgba(200,168,76,.4));transition:filter .4s;flex-shrink:0}
+.brand:hover .brand-sym{filter:drop-shadow(0 0 14px rgba(200,168,76,.75))}
+.brand-text{display:flex;flex-direction:column;gap:1px}
+.brand-name{font-family:'Cormorant SC',serif;font-size:clamp(15px,1.7vw,19px);font-weight:400;letter-spacing:.28em;color:var(--star);line-height:1;transition:color .4s}
+.brand:hover .brand-name{color:var(--gold)}
+.brand-sub{font-size:7px;font-weight:300;letter-spacing:.7em;text-transform:uppercase;color:var(--ash)}
+.nav-links{display:flex;gap:clamp(14px,2.2vw,38px);list-style:none}
+.nav-links a{font-size:10px;font-weight:300;letter-spacing:.32em;text-transform:uppercase;color:var(--stone);text-decoration:none;position:relative;padding-bottom:4px;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:1px;background:var(--gold);transition:width .4s var(--s1),left .4s var(--s1)}
+.nav-links a:hover{color:var(--star)}.nav-links a:hover::after,.nav-links a.hot::after{width:100%;left:0}.nav-links a.hot{color:var(--gold)}
+.nav-r{display:flex;align-items:center;gap:8px}
+.nav-btn{padding:8px 18px;background:transparent;border:1px solid rgba(200,168,76,.28);color:var(--gold);font-family:'Jost',sans-serif;font-size:9px;font-weight:300;letter-spacing:.32em;text-transform:uppercase;transition:all .4s var(--s1);clip-path:polygon(0 0,calc(100% - 6px) 0,100% 100%,6px 100%)}
+.nav-btn:hover{background:var(--gold);color:var(--void)}
+.nav-btn.stu{background:rgba(78,62,150,.2);border-color:rgba(78,62,150,.5);color:var(--mist)}.nav-btn.stu:hover{background:var(--violet);color:var(--star)}
+.nav-btn.active-stu{background:var(--ggl);border-color:rgba(200,168,76,.5)}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.ham span{display:block;height:1px;background:var(--star);transition:.4s var(--s1)}
+.ham span:nth-child(1){width:22px}.ham span:nth-child(2){width:14px}.ham span:nth-child(3){width:18px}
+.ham.x span:nth-child(1){width:18px;transform:translateY(6px) rotate(45deg)}.ham.x span:nth-child(2){opacity:0}.ham.x span:nth-child(3){width:18px;transform:translateY(-6px) rotate(-45deg)}
+#mobnav{position:fixed;inset:0;z-index:890;background:rgba(3,1,12,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+#mobnav.on{opacity:1;visibility:visible}
+.mob-a{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(32px,8vw,52px);font-weight:300;letter-spacing:.05em;color:var(--star);text-decoration:none;line-height:1.3;opacity:0;transform:translateY(12px);transition:color .3s,opacity .4s,transform .4s}
+#mobnav.on .mob-a{opacity:1;transform:none}
+#mobnav.on .mob-a:nth-child(1){transition-delay:.04s}#mobnav.on .mob-a:nth-child(2){transition-delay:.08s}
+#mobnav.on .mob-a:nth-child(3){transition-delay:.12s}#mobnav.on .mob-a:nth-child(4){transition-delay:.16s}
+#mobnav.on .mob-a:nth-child(5){transition-delay:.20s}#mobnav.on .mob-a:nth-child(6){transition-delay:.24s}
+#mobnav.on .mob-a:nth-child(7){transition-delay:.28s}.mob-a:hover{color:var(--gold)}
+
+/* HERO */
+#hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center}
+.hero-vid{position:absolute;inset:0}
+.hero-vid video{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2.5s ease}
+.hero-vid video.live{opacity:.45}
+.h-cosmos{position:absolute;inset:0;background:radial-gradient(ellipse 100% 100% at 50% 0%,rgba(46,37,104,.85) 0%,rgba(12,8,32,.65) 45%,var(--void) 80%)}
+.h-neb{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 16% 44%,rgba(78,62,150,.32) 0%,transparent 65%),radial-gradient(ellipse 45% 38% at 82% 68%,rgba(123,95,192,.2) 0%,transparent 58%);animation:nDrift 14s ease-in-out infinite alternate}
+@keyframes nDrift{to{background:radial-gradient(ellipse 70% 55% at 26% 40%,rgba(78,62,150,.38) 0%,transparent 65%),radial-gradient(ellipse 45% 38% at 72% 62%,rgba(123,95,192,.25) 0%,transparent 58%)}}
+.h-scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(3,1,12,.14) 2px,rgba(3,1,12,.14) 4px)}
+.h-stars{position:absolute;inset:0;overflow:hidden}
+.hstar{position:absolute;border-radius:50%;background:var(--star);animation:sP var(--sd,3s) var(--sdel,0s) ease-in-out infinite alternate}
+@keyframes sP{from{opacity:.15;transform:scale(1)}to{opacity:.85;transform:scale(1.4)}}
+.h-geo{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(50vw,540px);height:min(50vw,540px);pointer-events:none}
+.geo-r{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(200,168,76,.1);animation:geoS var(--gsp,35s) linear infinite}
+.geo-r:nth-child(2){inset:9%;border-color:rgba(78,62,150,.18);--gsp:26s;animation-direction:reverse}
+.geo-r:nth-child(3){inset:19%;border-color:rgba(200,168,76,.13);--gsp:18s}
+.geo-r:nth-child(4){inset:30%;border-color:rgba(78,62,150,.2);--gsp:12s;animation-direction:reverse}
+.geo-r:nth-child(5){inset:41%;border-color:rgba(200,168,76,.16);--gsp:7s}
+.geo-dot{position:absolute;top:-3px;left:50%;width:5px;height:5px;background:var(--gold);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--gold)}
+@keyframes geoS{to{transform:rotate(360deg)}}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(78,62,150,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(78,62,150,.05) 1px,transparent 1px);background-size:90px 90px;opacity:0;transition:opacity 1.2s}
+.h-grid.on{opacity:1}
+.hero-c{position:relative;z-index:3;width:100%;padding:0 clamp(24px,5vw,80px)}
+.h-ey{display:flex;align-items:center;gap:14px;font-size:9px;letter-spacing:.62em;text-transform:uppercase;color:var(--gold);margin-bottom:clamp(14px,2.2vh,26px);opacity:0;transform:translateY(9px);transition:opacity .7s,transform .7s}
+.h-ey.on{opacity:1;transform:none}.h-ey::before{content:'';width:28px;height:1px;background:var(--gold2)}
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7.8vw,112px);font-weight:300;line-height:.91;letter-spacing:-.02em;margin-bottom:clamp(14px,2.2vh,28px);max-width:720px}
+.hl{display:block;overflow:hidden}
+.hw{display:inline-block;opacity:0;transform:translateY(100%);transition:opacity .8s var(--s1),transform .8s var(--s1)}
+.hw.on{opacity:1;transform:none}
+.hw em{font-style:italic;color:var(--gold)}.hw .dim{color:var(--stone)}
+.h-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(13px,1.7vw,19px);font-weight:300;color:var(--stone);max-width:440px;margin-bottom:clamp(20px,3.2vh,38px);letter-spacing:.04em;line-height:1.78;border-left:2px solid rgba(200,168,76,.3);padding-left:20px;opacity:0;transform:translateY(7px);transition:opacity .7s,transform .7s}
+.h-verse.on{opacity:1;transform:none}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;transform:translateY(6px);transition:opacity .6s,transform .6s}.h-btns.on{opacity:1;transform:none}
+.h-scr{position:absolute;bottom:clamp(22px,3.5vh,42px);left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:3;opacity:0;transition:opacity .6s}.h-scr.on{opacity:1}
+.scrl{width:1px;height:50px;background:rgba(248,244,255,.1);overflow:hidden;position:relative}
+.scrl::after{content:'';position:absolute;top:-100%;width:100%;height:50%;background:linear-gradient(to bottom,transparent,var(--amethyst));animation:sDrip 2.2s 1s ease-in-out infinite}
+@keyframes sDrip{0%{top:-100%}100%{top:200%}}
+.scrl-t{font-size:8px;letter-spacing:.55em;text-transform:uppercase;color:var(--ash)}
+
+/* BUTTONS */
+.btn-gold{display:inline-flex;align-items:center;gap:13px;padding:14px 34px;background:var(--gold);color:var(--void);font-size:10px;font-weight:400;letter-spacing:.4em;text-transform:uppercase;text-decoration:none;border:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%);position:relative;overflow:hidden;transition:gap .45s var(--s1),box-shadow .4s}
+.btn-gold::before{content:'';position:absolute;inset:0;background:var(--star);transform:translateX(-101%);transition:transform .45s var(--s1)}
+.btn-gold:hover::before{transform:translateX(0)}.btn-gold:hover{gap:22px;box-shadow:0 0 32px rgba(200,168,76,.4)}.btn-gold>*{position:relative;z-index:1}
+.btn-ghost{display:inline-flex;align-items:center;gap:12px;padding:14px 30px;background:transparent;border:1px solid rgba(248,244,255,.15);color:var(--ivory);font-size:10px;font-weight:300;letter-spacing:.4em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%);transition:all .4s}
+.btn-ghost:hover{border-color:rgba(200,168,76,.5);color:var(--gold);gap:20px;background:var(--ggl)}
+.btn-vio{display:inline-flex;align-items:center;gap:11px;padding:14px 28px;background:var(--violet);color:var(--star);font-size:10px;font-weight:300;letter-spacing:.38em;text-transform:uppercase;text-decoration:none;border:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%);position:relative;overflow:hidden;transition:gap .4s var(--s1)}
+.btn-vio::before{content:'';position:absolute;inset:0;background:var(--amethyst);transform:translateX(-101%);transition:transform .42s var(--s1)}
+.btn-vio:hover::before{transform:translateX(0)}.btn-vio:hover{gap:19px}.btn-vio>*{position:relative;z-index:1}
+
+/* TICKER */
+.ticker{overflow:hidden;position:relative;background:var(--abyss);border-top:1px solid rgba(78,62,150,.28);border-bottom:1px solid rgba(78,62,150,.28);padding:13px 0}
+.ticker::before{content:'';position:absolute;top:0;bottom:0;left:0;width:80px;background:linear-gradient(to right,var(--abyss),transparent);z-index:2}
+.ticker::after{content:'';position:absolute;top:0;bottom:0;right:0;width:80px;background:linear-gradient(to left,var(--abyss),transparent);z-index:2}
+.tick-track{display:flex;white-space:nowrap;animation:tickM 40s linear infinite}
+.tick-track:hover{animation-play-state:paused}
+@keyframes tickM{to{transform:translateX(-50%)}}
+.tick-item{display:inline-flex;align-items:center;gap:34px;padding:0 34px;font-family:'Cormorant SC',serif;font-size:13px;letter-spacing:.13em;color:var(--stone);transition:color .3s}
+.tick-item:hover{color:var(--gold)}.tick-gem{color:var(--amethyst);opacity:.8;font-size:9px}
+
+/* SECTION */
+.sec{padding:clamp(64px,9.5vh,130px) clamp(24px,5vw,70px)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:9px;letter-spacing:.65em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);flex-shrink:0}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.6vw,66px);font-weight:300;line-height:1.04;letter-spacing:-.01em;margin-bottom:10px}
+.sec-h em{font-style:italic;color:var(--gold)}.sec-h span{color:var(--stone)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .95s var(--s1),transform .95s var(--s1)}
+.rvl{opacity:0;transform:translateX(-30px);transition:opacity .95s var(--s1),transform .95s var(--s1)}
+.rvr{opacity:0;transform:translateX(30px);transition:opacity .95s var(--s1),transform .95s var(--s1)}
+.rv.in,.rvl.in,.rvr.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.32s}.d4{transition-delay:.44s}
+
+/* ABOUT */
+#about{display:grid;grid-template-columns:1fr 1fr;min-height:70vh;background:var(--depth)}
+.about-vis{position:relative;overflow:hidden;min-height:400px}
+.about-vis::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(78,62,150,.22) 0%,transparent 60%);z-index:1}
+.about-img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) sepia(.25)}
+.about-frame{position:absolute;inset:18px;border:1px solid rgba(200,168,76,.18);pointer-events:none;z-index:2}
+.about-frame::before{content:'';position:absolute;top:-1px;left:-1px;width:38px;height:38px;border-top:2px solid rgba(200,168,76,.5);border-left:2px solid rgba(200,168,76,.5)}
+.about-frame::after{content:'';position:absolute;bottom:-1px;right:-1px;width:38px;height:38px;border-bottom:2px solid rgba(200,168,76,.5);border-right:2px solid rgba(200,168,76,.5)}
+.about-copy{padding:clamp(44px,7vh,84px) clamp(30px,5vw,76px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.about-copy::before{content:'';position:absolute;left:0;top:10%;bottom:10%;width:1px;background:linear-gradient(to bottom,transparent,rgba(78,62,150,.35),transparent)}
+.about-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,2vw,24px);font-weight:300;line-height:1.62;color:var(--ivory);margin:22px 0 24px;padding-left:20px;border-left:2px solid rgba(200,168,76,.35)}
+.about-p{font-size:13px;font-weight:300;line-height:2;color:var(--stone);margin-bottom:14px;letter-spacing:.04em}
+.about-stats{display:flex;gap:32px;margin-top:32px}
+.ast-n{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--star);line-height:1}
+.ast-l{font-size:8px;letter-spacing:.5em;text-transform:uppercase;color:var(--ash);margin-top:4px}
+
+/* COURSES */
+#courses{background:var(--void);position:relative}
+#courses::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(78,62,150,.6),transparent)}
+.courses-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:22px;margin-bottom:clamp(32px,5vh,56px)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.fil{padding:7px 18px;background:transparent;border:1px solid rgba(248,244,255,.1);color:var(--stone);font-size:10px;font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-family:'Jost',sans-serif;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 100%,6px 100%);transition:all .4s var(--s1)}
+.fil:hover{border-color:rgba(200,168,76,.4);color:var(--ivory)}.fil.on{background:var(--gold);border-color:var(--gold);color:var(--void)}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.cc{position:relative;background:var(--abyss);overflow:hidden;border:1px solid rgba(78,62,150,.1);transition:border-color .45s,transform .45s var(--s1)}
+.cc:hover{border-color:rgba(200,168,76,.22);transform:translateY(-2px)}
+.cc-glow{position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 85%,rgba(78,62,150,.18) 0%,transparent 70%);opacity:0;transition:opacity .5s;pointer-events:none}
+.cc:hover .cc-glow{opacity:1}
+.cc-vis{position:relative;height:210px;overflow:hidden;background:var(--depth)}
+.cc-vis img,.cc-vis video{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--s1)}
+.cc-vis img{filter:saturate(.72) brightness(.68)}.cc:hover .cc-vis img,.cc:hover .cc-vis video{transform:scale(1.06)}
+.cc-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 25%,rgba(6,3,26,.96) 100%)}
+.cc-cat{position:absolute;top:12px;left:12px;font-size:8px;letter-spacing:.35em;text-transform:uppercase;padding:5px 11px;background:rgba(78,62,150,.72);border:1px solid rgba(123,95,192,.4);color:var(--mist);backdrop-filter:blur(6px)}
+.cc-badge{position:absolute;top:12px;right:12px;font-size:8px;letter-spacing:.26em;text-transform:uppercase;padding:4px 10px}
+.cc-badge.new{background:var(--gold);color:var(--void)}.cc-badge.pop{background:rgba(78,62,150,.85);color:var(--star);border:1px solid rgba(123,95,192,.4)}.cc-badge.free{background:rgba(13,104,48,.85);color:#7df5a0;border:1px solid rgba(45,184,96,.3)}
+.cc-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s;z-index:2}
+.cc:hover .cc-play{opacity:1}
+.cc-play-btn{width:52px;height:52px;background:rgba(200,168,76,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;border:none;color:var(--void);transition:transform .3s var(--s4),box-shadow .3s;backdrop-filter:blur(4px)}
+.cc-play-btn:hover{transform:scale(1.12);box-shadow:0 0 24px rgba(200,168,76,.5)}
+.cc-body{padding:clamp(16px,3%,26px)}
+.cc-title{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,1.9vw,22px);font-weight:400;color:var(--star);margin-bottom:4px;letter-spacing:.02em;line-height:1.22}
+.cc-urdu{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--stone);margin-bottom:5px;direction:rtl}
+.cc-teacher{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.cc-desc{font-size:12px;font-weight:300;line-height:1.84;color:var(--stone);margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cc-meta{display:flex;align-items:center;gap:14px;font-size:10px;color:var(--ash);margin-bottom:14px;flex-wrap:wrap}
+.cc-vcall{display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--jade);background:rgba(13,104,48,.18);border:1px solid rgba(45,184,96,.25);padding:4px 10px;margin-bottom:14px}
+.cc-vcall::before{content:'◉';animation:vcP 2s ease-in-out infinite}
+@keyframes vcP{0%,100%{opacity:1}50%{opacity:.3}}
+.cc-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(78,62,150,.18)}
+.cc-price-wrap{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.cc-price{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--star);letter-spacing:.04em}
+.cc-orig{font-size:11px;color:var(--ash);text-decoration:line-through}
+.cc-disc{font-size:9px;color:var(--star);background:rgba(192,56,40,.72);padding:3px 7px;letter-spacing:.14em}
+.cc-enroll{padding:10px 20px;background:var(--amethyst);color:var(--star);border:none;font-family:'Jost',sans-serif;font-size:9px;font-weight:300;letter-spacing:.36em;text-transform:uppercase;position:relative;overflow:hidden;white-space:nowrap;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%)}
+.cc-enroll::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateX(-101%);transition:transform .4s var(--s1)}
+.cc-enroll:hover::before{transform:translateX(0)}.cc-enroll span{position:relative;z-index:1}
+/* Featured course */
+.cc-feat{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(200,168,76,.22);background:var(--well)}
+.cc-feat .cc-vis{height:100%;min-height:300px}
+.cf-body{padding:clamp(28px,5%,48px);display:flex;flex-direction:column;justify-content:center}
+.cf-tag{display:inline-flex;align-items:center;gap:7px;font-size:8px;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);padding:6px 16px;border:1px solid rgba(200,168,76,.24);margin-bottom:18px;align-self:flex-start}
+.cf-tag::before{content:'✦';font-size:7px}
+.cf-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.2vw,44px);font-weight:300;color:var(--star);margin-bottom:8px;line-height:1.08}
+.cf-urdu{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--stone);margin-bottom:8px;direction:rtl}
+.cf-desc{font-size:13px;font-weight:300;line-height:1.94;color:var(--stone);margin-bottom:20px;max-width:420px}
+.cf-includes{display:flex;flex-direction:column;gap:7px;margin-bottom:24px}
+.cf-inc{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--stone)}
+.cf-inc::before{content:'✦';font-size:7px;color:var(--gold);flex-shrink:0}
+.cf-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cf-price{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--gold);letter-spacing:.04em}
+
+/* VIDEO PLAYER MODAL */
+.vid-modal{position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.vid-modal.on{opacity:1;visibility:visible}
+.vid-wrap{position:relative;width:min(900px,95vw);background:var(--abyss);border:1px solid rgba(78,62,150,.2)}
+.vid-wrap video{width:100%;display:block;max-height:62vh;object-fit:contain;background:#000}
+.vid-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(78,62,150,.2)}
+.vid-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--star)}
+.vid-close{background:none;border:none;color:var(--ash);font-size:20px;transition:color .3s}.vid-close:hover{color:var(--star)}
+.vid-list{padding:16px 18px;max-height:220px;overflow-y:auto}
+.vid-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid rgba(78,62,150,.1);cursor:pointer;transition:background .3s}
+.vid-item:hover{background:rgba(78,62,150,.08)}.vid-item.active{background:rgba(200,168,76,.08);border-left:2px solid var(--gold)}
+.vid-num{font-size:11px;color:var(--ash);width:22px;flex-shrink:0}
+.vid-name{font-size:13px;color:var(--ivory);flex:1}
+.vid-dur{font-size:10px;color:var(--ash)}
+
+/* 1V1 SECTION */
+#vcall{background:var(--depth);position:relative;overflow:hidden}
+#vcall::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(78,62,150,.2) 0%,transparent 70%)}
+.vcall-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.vcall-how{display:flex;flex-direction:column;gap:18px;margin:28px 0 32px}
+.vcall-step{display:flex;gap:18px;align-items:flex-start}
+.v-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(200,168,76,.4);line-height:1;flex-shrink:0;width:36px}
+.v-step-t{font-size:13px;font-weight:300;line-height:1.85;color:var(--stone)}
+.v-step-t strong{display:block;color:var(--star);font-weight:400;margin-bottom:2px}
+.vcall-card{background:rgba(7,4,24,.88);border:1px solid rgba(78,62,150,.22);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));padding:clamp(24px,4%,40px)}
+.vc-head{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid rgba(78,62,150,.18)}
+.vc-icon{font-size:24px;color:var(--jade);filter:drop-shadow(0 0 8px rgba(45,184,96,.45))}
+.vc-t{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--star)}
+.vc-s{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--amethyst);margin-top:2px}
+.vc-pkgs{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.vpkg{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid rgba(78,62,150,.2);transition:border-color .3s,background .3s;cursor:pointer}
+.vpkg:hover,.vpkg.on{border-color:rgba(200,168,76,.4);background:var(--ggl)}
+.vpkg-name{font-size:13px;font-weight:300;color:var(--ivory);margin-bottom:2px}
+.vpkg-desc{font-size:10px;color:var(--stone);letter-spacing:.1em}
+.vpkg-price{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);letter-spacing:.04em;flex-shrink:0}
+.vc-note{font-size:11px;color:var(--ash);line-height:1.7;letter-spacing:.06em;margin-bottom:18px}
+
+/* WISDOM */
+#wisdom{position:relative;min-height:52vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--abyss)}
+.wis-geo{position:absolute;inset:0}
+.wis-geo::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:560px;height:560px;border-radius:50%;border:1px solid rgba(78,62,150,.12);animation:wS 28s linear infinite}
+.wis-geo::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:360px;height:360px;border-radius:50%;border:1px solid rgba(200,168,76,.08);animation:wS 18s linear infinite reverse}
+@keyframes wS{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.wis-glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(78,62,150,.22) 0%,transparent 70%)}
+.wis-c{position:relative;z-index:2;text-align:center;padding:clamp(44px,7vh,76px) clamp(24px,8vw,110px);max-width:900px}
+.wis-sym{font-size:clamp(30px,5vw,50px);color:var(--gold);margin-bottom:24px;filter:drop-shadow(0 0 16px rgba(200,168,76,.45))}
+.wis-q{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.9vw,38px);font-style:italic;font-weight:300;line-height:1.52;color:var(--ivory);margin-bottom:20px}
+.wis-q::before{content:'\201C';color:rgba(200,168,76,.5)}.wis-q::after{content:'\201D';color:rgba(200,168,76,.5)}
+.wis-attr{font-size:10px;letter-spacing:.48em;text-transform:uppercase;color:var(--ash)}.wis-attr span{color:var(--gold)}
+
+/* TESTIMONIALS */
+#testi{background:var(--depth)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:clamp(28px,4vh,48px)}
+.tc{padding:clamp(22px,3.5%,38px);background:rgba(12,8,32,.82);border:1px solid rgba(78,62,150,.14);position:relative;overflow:hidden;transition:border-color .4s}
+.tc::before{content:'';position:absolute;bottom:-100%;left:0;right:0;height:100%;background:linear-gradient(to top,rgba(78,62,150,.1),transparent);transition:bottom .5s var(--s1)}
+.tc:hover{border-color:rgba(200,168,76,.22)}.tc:hover::before{bottom:0}
+.tc-stars{color:var(--gold);font-size:11px;letter-spacing:3px;margin-bottom:13px}
+.tc-q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(13px,1.5vw,17px);font-weight:300;line-height:1.7;color:var(--ivory);margin-bottom:16px}
+.tc-q::before{content:'\201C';color:rgba(200,168,76,.45)}.tc-q::after{content:'\201D';color:rgba(200,168,76,.45)}
+.tc-name{font-size:10px;letter-spacing:.33em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}.tc-loc{font-size:10px;color:var(--ash)}
+
+/* AI GUIDE SECTION */
+#guide-sec{display:grid;grid-template-columns:1fr 1fr;min-height:74vh;align-items:center;background:var(--well);position:relative;overflow:hidden}
+.gs-glow{position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 18% 52%,rgba(78,62,150,.28) 0%,transparent 65%)}
+.gs-inner{position:relative;z-index:2;padding:clamp(52px,8vh,84px) clamp(26px,5vw,68px)}
+.guide-name{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.2vw,78px);font-weight:300;line-height:1;letter-spacing:-.02em;margin-bottom:16px}
+.guide-name em{font-style:italic;color:var(--gold)}
+.guide-lim{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.22em;color:var(--stone);background:rgba(248,244,255,.05);border:1px solid rgba(248,244,255,.08);padding:6px 14px;margin-bottom:20px}
+.guide-lim span{color:var(--gold);font-weight:400}
+.guide-body{font-size:13px;font-weight:300;line-height:2;color:var(--stone);max-width:400px;margin-bottom:26px}
+.gfeats{display:flex;flex-direction:column;gap:15px;margin-bottom:28px}
+.gfeat{display:flex;gap:12px;align-items:flex-start}
+.gfeat-i{font-size:14px;color:var(--gold);width:20px;flex-shrink:0;margin-top:2px}
+.gfeat-t{font-size:12px;font-weight:300;line-height:1.8;color:var(--stone)}
+.gfeat-t strong{display:block;font-weight:400;color:var(--star);margin-bottom:1px}
+.gs-demo{position:relative;z-index:2;margin:clamp(26px,4vw,48px);background:rgba(6,3,22,.9);border:1px solid rgba(78,62,150,.2);backdrop-filter:blur(18px);clip-path:polygon(0 0,calc(100% - 15px) 0,100% 15px,100% 100%,15px 100%,0 calc(100% - 15px))}
+.gd-hd{display:flex;justify-content:space-between;align-items:center;padding:15px 19px;border-bottom:1px solid rgba(78,62,150,.15);background:rgba(78,62,150,.07)}
+.gd-n{font-family:'Cormorant SC',serif;font-size:12px;letter-spacing:.26em;color:var(--star)}
+.gd-s{font-size:9px;letter-spacing:.18em;color:var(--amethyst);margin-top:2px}
+.gd-b{font-size:10px;color:var(--gold);letter-spacing:.04em}
+.gd-msgs{padding:18px;display:flex;flex-direction:column;gap:12px}
+.gdm{display:flex;flex-direction:column;gap:4px}
+.gdl{font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:var(--ash)}
+.gdb{font-size:12px;font-weight:300;line-height:1.76;padding:10px 13px;max-width:90%}
+.gdm.u .gdl{align-self:flex-end}.gdm.u .gdb{align-self:flex-end;background:rgba(200,168,76,.1);border:1px solid rgba(200,168,76,.18);color:var(--ivory)}
+.gdm.a .gdb{background:rgba(248,244,255,.04);border:1px solid rgba(248,244,255,.06);color:var(--ivory)}
+.gd-inp{display:flex;align-items:center;gap:9px;padding:11px 18px;border-top:1px solid rgba(78,62,150,.12)}
+.gd-fake{flex:1;font-size:11px;color:var(--cave);font-style:italic}.gd-arr{color:var(--gold);font-size:16px}
+
+/* CONTACT */
+#contact{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(78,62,150,.22)}
+.ct-l{padding:clamp(52px,8vh,84px) clamp(26px,5vw,64px);background:var(--void);position:relative;overflow:hidden}
+.ct-l::after{content:'';position:absolute;right:-50px;top:50%;transform:translateY(-50%);width:240px;height:240px;background:radial-gradient(circle,rgba(78,62,150,.12) 0%,transparent 70%)}
+.ct-r{padding:clamp(52px,8vh,84px) clamp(26px,5vw,64px);background:var(--abyss)}
+.ct-det{margin-bottom:19px}
+.ct-det label{font-size:8px;letter-spacing:.46em;text-transform:uppercase;color:var(--ash);display:block;margin-bottom:4px}
+.ct-det a,.ct-det span{font-size:15px;color:var(--ivory);text-decoration:none;transition:color .3s}.ct-det a:hover{color:var(--gold)}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;margin-top:22px;background:transparent;border:1px solid rgba(200,168,76,.28);color:var(--gold);font-family:'Jost',sans-serif;font-size:10px;font-weight:300;letter-spacing:.34em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 100%,9px 100%);transition:all .4s var(--s1)}
+.btn-wa:hover{background:var(--gold);color:var(--void)}
+.ff{position:relative;margin-bottom:22px}
+.ff input,.ff textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(248,244,255,.1);color:var(--star);font-family:'Jost',sans-serif;font-size:13px;font-weight:300;padding:15px 0 9px;outline:none;transition:border-color .4s;resize:none}
+.ff textarea{min-height:86px}
+.ff label{position:absolute;left:0;top:15px;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--ash);pointer-events:none;transition:top .3s,font-size .3s,color .3s}
+.ff input:focus,.ff textarea:focus,.ff input:not(:placeholder-shown),.ff textarea:not(:placeholder-shown){border-color:rgba(200,168,76,.4)}
+.ff input:focus~label,.ff textarea:focus~label,.ff input:not(:placeholder-shown)~label,.ff textarea:not(:placeholder-shown)~label{top:-2px;font-size:8px;color:var(--gold)}
+.ff-ln{position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .5s var(--s1)}
+.ff input:focus~.ff-ln,.ff textarea:focus~.ff-ln{width:100%}
+.btn-send{width:100%;padding:15px;background:var(--amethyst);color:var(--star);border:none;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.38em;text-transform:uppercase;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 100%,11px 100%)}
+.btn-send::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateX(-101%);transition:transform .46s var(--s1)}
+.btn-send:hover::before{transform:translateX(0)}.btn-send span{position:relative;z-index:1}
+
+/* FOOTER */
+footer{background:var(--void);padding:clamp(44px,7vh,68px) clamp(24px,5vw,64px) clamp(20px,3vh,38px);border-top:1px solid rgba(78,62,150,.24);position:relative}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,168,76,.42),transparent)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(22px,4vw,52px);margin-bottom:clamp(36px,5vh,52px)}
+.ft-copy{font-size:12px;font-weight:300;line-height:1.9;color:var(--ash);max-width:220px;margin-top:13px}
+.ft-col h5{font-size:9px;letter-spacing:.48em;text-transform:uppercase;color:var(--gold2);font-weight:400;margin-bottom:15px}
+.ft-col ul{list-style:none}.ft-col li{margin-bottom:10px}
+.ft-col a{font-size:12px;font-weight:300;color:var(--ash);text-decoration:none;transition:color .3s}.ft-col a:hover{color:var(--star)}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:clamp(16px,2vh,24px);border-top:1px solid rgba(248,244,255,.05);font-size:11px;color:var(--cave);letter-spacing:.07em;flex-wrap:wrap;gap:8px}
+
+/* MODALS */
+.modal-veil{position:fixed;inset:0;z-index:6000;background:rgba(0,0,0,.88);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.modal-veil.on{opacity:1;visibility:visible}
+.modal-box{background:var(--depth);max-width:540px;width:100%;border:1px solid rgba(78,62,150,.25);transform:scale(.93) translateY(16px);transition:transform .52s var(--s1);clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));padding:clamp(24px,5%,42px);position:relative;max-height:90vh;overflow-y:auto}
+.modal-veil.on .modal-box{transform:scale(1) translateY(0)}
+.m-x{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--ash);font-size:18px;transition:color .3s}.m-x:hover{color:var(--star)}
+.m-sym{font-size:26px;color:var(--gold);margin-bottom:10px;display:block;filter:drop-shadow(0 0 10px rgba(200,168,76,.45))}
+.m-title{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,30px);font-weight:400;color:var(--star);margin-bottom:5px;letter-spacing:.02em}
+.m-sub{font-size:13px;color:var(--stone);margin-bottom:20px;line-height:1.8}
+.m-price{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);margin-bottom:6px;letter-spacing:.04em}
+.m-vcall-note{font-size:11px;color:var(--jade);letter-spacing:.1em;margin-bottom:18px}
+.m-fields{display:flex;flex-direction:column;gap:16px}
+.m-field{display:flex;flex-direction:column;gap:5px}
+.m-field label{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:var(--ash)}
+.m-field input,.m-field select{background:rgba(248,244,255,.04);border:1px solid rgba(78,62,150,.22);color:var(--star);font-family:'Jost',sans-serif;font-size:13px;font-weight:300;padding:11px 13px;outline:none;transition:border-color .3s;-webkit-appearance:none}
+.m-field input:focus,.m-field select:focus{border-color:rgba(200,168,76,.42)}
+.m-field select option{background:var(--depth)}
+.m-pay-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+.m-pay-btn{padding:8px 16px;border:1px solid rgba(248,244,255,.1);background:transparent;color:var(--stone);font-size:10px;font-family:'Jost',sans-serif;letter-spacing:.2em;transition:all .3s}
+.m-pay-btn:hover,.m-pay-btn.on{border-color:rgba(200,168,76,.4);color:var(--gold);background:var(--ggl)}
+.m-btns{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}
+.btn-enroll-wa{flex:1;min-width:140px;padding:14px;background:var(--gold);color:var(--void);border:none;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.38em;text-transform:uppercase;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 100%,9px 100%)}
+.btn-enroll-wa::before{content:'';position:absolute;inset:0;background:var(--star);transform:translateX(-101%);transition:transform .42s var(--s1)}
+.btn-enroll-wa:hover::before{transform:translateX(0)}.btn-enroll-wa span{position:relative;z-index:1}
+.btn-stripe{flex:1;min-width:140px;padding:14px;background:var(--violet);color:var(--star);border:none;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.38em;text-transform:uppercase;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 100%,9px 100%)}
+.btn-stripe::before{content:'';position:absolute;inset:0;background:var(--amethyst);transform:translateX(-101%);transition:transform .42s var(--s1)}
+.btn-stripe:hover::before{transform:translateX(0)}.btn-stripe span{position:relative;z-index:1}
+.m-err{font-size:12px;color:rgba(192,56,40,.9);margin-top:8px;display:none}.m-err.on{display:block}
+.m-ok{font-size:12px;color:var(--jade);margin-top:8px;display:none}.m-ok.on{display:block}
+
+/* NOOR WIDGET */
+.guide-fab{position:fixed;bottom:clamp(17px,3vw,27px);right:clamp(17px,3vw,27px);z-index:4500;width:54px;height:54px;border-radius:50%;background:var(--void);border:1px solid rgba(78,62,150,.38);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--gold);transition:all .4s;box-shadow:0 7px 26px rgba(0,0,0,.6)}
+.guide-fab::before{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(78,62,150,.14);animation:fabR 2.8s ease-in-out infinite}
+@keyframes fabR{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.12);opacity:0}}
+.guide-fab:hover{border-color:rgba(78,62,150,.7);box-shadow:0 0 24px rgba(78,62,150,.32);transform:scale(1.06)}.guide-fab.on{background:var(--gold);border-color:var(--gold);color:var(--void)}
+.guide-panel{position:fixed;right:clamp(9px,2vw,20px);bottom:clamp(80px,10.5vh,98px);z-index:4400;width:min(375px,calc(100vw - 18px));background:rgba(6,3,22,.95);border:1px solid rgba(78,62,150,.2);backdrop-filter:blur(22px);display:flex;flex-direction:column;max-height:min(510px,70vh);clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,13px 100%,0 calc(100% - 13px));box-shadow:0 22px 60px rgba(0,0,0,.84);transform:translateY(13px) scale(.96);opacity:0;visibility:hidden;transition:transform .44s var(--s1),opacity .35s,visibility .35s}
+.guide-panel.on{transform:none;opacity:1;visibility:visible}
+.gp-hd{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;background:rgba(78,62,150,.08);border-bottom:1px solid rgba(78,62,150,.13);flex-shrink:0}
+.gp-nm{font-family:'Cormorant SC',serif;font-size:12px;letter-spacing:.25em;color:var(--star)}
+.gp-st{font-size:9px;letter-spacing:.17em;color:var(--amethyst);margin-top:2px}
+.gp-lim{font-size:9px;color:var(--ash);letter-spacing:.1em}.gp-lim span{color:var(--gold);font-weight:400}
+.gp-msgs{flex:1;overflow-y:auto;padding:12px 15px;display:flex;flex-direction:column;gap:10px}
+.gp-msgs::-webkit-scrollbar{width:1px}
+.nm{display:flex;flex-direction:column;gap:3px}
+.nml{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
+.nmb{font-size:12px;font-weight:300;line-height:1.74;padding:9px 12px;max-width:92%}
+.nm.u .nml{align-self:flex-end}.nm.u .nmb{align-self:flex-end;background:rgba(200,168,76,.1);border:1px solid rgba(200,168,76,.18);color:var(--ivory)}
+.nm.a .nmb{background:rgba(248,244,255,.04);border:1px solid rgba(248,244,255,.06);color:var(--ivory)}
+.gp-typing{padding:8px 15px;display:none}.gp-typing.on{display:block}
+.typing{display:flex;gap:4px;align-items:center}
+.typing span{width:4px;height:4px;background:var(--stone);border-radius:50%;animation:tDot 1.2s ease-in-out infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes tDot{0%,80%,100%{transform:scale(1);opacity:.4}40%{transform:scale(1.28);opacity:1}}
+.gp-lim-warn{padding:9px 15px;font-size:11px;color:rgba(200,168,76,.8);background:rgba(200,168,76,.07);border-top:1px solid rgba(200,168,76,.12);text-align:center;display:none}.gp-lim-warn.on{display:block}
+.gp-quick{display:flex;flex-wrap:wrap;gap:5px;padding:8px 15px;border-top:1px solid rgba(248,244,255,.05);flex-shrink:0}
+.gp-qb{padding:5px 11px;background:rgba(248,244,255,.04);border:1px solid rgba(248,244,255,.07);color:var(--stone);font-size:10px;font-weight:300;font-family:'Jost',sans-serif;letter-spacing:.1em;transition:all .3s}
+.gp-qb:hover{border-color:rgba(200,168,76,.3);color:var(--gold);background:var(--ggl)}
+.gp-inp-row{display:flex;border-top:1px solid rgba(78,62,150,.15);flex-shrink:0}
+.gp-inp{flex:1;background:transparent;border:none;outline:none;padding:12px 14px;color:var(--star);font-family:'Jost',sans-serif;font-size:12px;font-weight:300}
+.gp-inp::placeholder{color:var(--cave)}
+.gp-send{background:var(--amethyst);border:none;color:var(--star);width:43px;font-size:16px;transition:background .3s;flex-shrink:0}
+.gp-send:hover{background:var(--gold);color:var(--void)}
+
+/* ADMIN */
+#adminVeil{position:fixed;inset:0;z-index:7000;background:rgba(0,0,0,.87);backdrop-filter:blur(16px);display:none;overflow-y:auto;padding:20px}
+#adminVeil.on{display:flex;align-items:flex-start;justify-content:center}
+.admin-panel{background:var(--abyss);width:100%;max-width:1040px;border:1px solid rgba(78,62,150,.3);margin:auto;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.adm-gate{display:flex;flex-direction:column;align-items:center;gap:16px;padding:52px 28px;text-align:center}
+.adm-gate h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--star)}
+.adm-gate p{font-size:13px;color:var(--stone)}
+.adm-pw{background:rgba(248,244,255,.04);border:1px solid rgba(78,62,150,.25);color:var(--star);font-family:'Jost',sans-serif;font-size:14px;padding:13px 16px;outline:none;text-align:center;letter-spacing:.18em;transition:border-color .3s;width:100%;max-width:300px}
+.adm-pw:focus{border-color:rgba(200,168,76,.42)}
+.adm-err{font-size:11px;color:rgba(192,56,40,.9);display:none}.adm-err.on{display:block}
+.adm-hd{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;border-bottom:1px solid rgba(78,62,150,.2);background:rgba(78,62,150,.07)}
+.adm-hd h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;letter-spacing:.1em;color:var(--star)}
+.adm-x{background:none;border:none;color:var(--ash);font-size:20px;transition:color .3s}.adm-x:hover{color:var(--star)}
+.adm-tabs{display:flex;border-bottom:1px solid rgba(78,62,150,.14);padding:0 26px;flex-wrap:wrap}
+.adm-tab{padding:12px 18px;background:none;border:none;font-family:'Jost',sans-serif;font-size:10px;font-weight:300;letter-spacing:.28em;text-transform:uppercase;color:var(--ash);position:relative;transition:color .3s}
+.adm-tab::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .4s var(--s1)}
+.adm-tab:hover{color:var(--stone)}.adm-tab.on{color:var(--gold)}.adm-tab.on::after{transform:scaleX(1)}
+.adm-body{padding:22px 26px}
+.adm-sec{display:none}.adm-sec.on{display:block}
+.adm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.ast{padding:18px;background:rgba(248,244,255,.03);border:1px solid rgba(78,62,150,.14);text-align:center}
+.ast-n{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold);line-height:1}
+.ast-l{font-size:9px;letter-spacing:.36em;text-transform:uppercase;color:var(--ash);margin-top:4px}
+.adm-list{display:flex;flex-direction:column;gap:2px;margin-bottom:18px}
+.adm-row{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;align-items:center;padding:13px 16px;background:rgba(248,244,255,.03);border:1px solid rgba(78,62,150,.1);transition:border-color .3s}
+.adm-row:hover{border-color:rgba(78,62,150,.28)}
+.ar-name{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--star);margin-bottom:2px}
+.ar-cat{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--amethyst)}
+.ar-price{font-size:13px;color:var(--gold);font-weight:300;white-space:nowrap}
+.ar-status{font-size:9px;letter-spacing:.18em;padding:4px 9px;text-transform:uppercase}
+.ar-status.active{background:rgba(13,104,48,.5);color:#7df5a0;border:1px solid rgba(45,184,96,.24)}
+.ar-status.draft{background:rgba(78,62,150,.4);color:var(--mist);border:1px solid rgba(78,62,150,.4)}
+.ar-status.pending{background:rgba(200,140,0,.18);color:#f0b020;border:1px solid rgba(200,140,0,.28)}
+.ar-btns{display:flex;gap:5px}
+.ar-btn{padding:6px 12px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-family:'Jost',sans-serif;border:1px solid;background:transparent;transition:all .3s}
+.ar-btn.edit{border-color:rgba(200,168,76,.28);color:var(--gold)}.ar-btn.edit:hover{background:var(--gold);color:var(--void)}
+.ar-btn.del{border-color:rgba(192,56,40,.28);color:rgba(192,56,40,.8)}.ar-btn.del:hover{background:rgba(192,56,40,.8);color:var(--star)}
+.ar-btn.approve{border-color:rgba(45,184,96,.35);color:var(--jade)}.ar-btn.approve:hover{background:var(--jade);color:var(--void)}
+.ar-btn.reject{border-color:rgba(192,56,40,.28);color:rgba(192,56,40,.8)}.ar-btn.reject:hover{background:rgba(192,56,40,.8);color:var(--star)}
+.adm-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.adm-form-full{grid-column:span 2}
+.adm-field{display:flex;flex-direction:column;gap:6px}
+.adm-field label{font-size:9px;letter-spacing:.36em;text-transform:uppercase;color:var(--ash)}
+.adm-field input,.adm-field textarea,.adm-field select{background:rgba(248,244,255,.04);border:1px solid rgba(78,62,150,.2);color:var(--star);font-family:'Jost',sans-serif;font-size:13px;font-weight:300;padding:10px 13px;outline:none;transition:border-color .3s;resize:none;-webkit-appearance:none}
+.adm-field input:focus,.adm-field textarea:focus,.adm-field select:focus{border-color:rgba(200,168,76,.42)}
+.adm-field select option{background:var(--depth)}.adm-field textarea{min-height:80px}
+.adm-foot{display:flex;gap:9px;margin-top:6px;grid-column:span 2}
+.adm-save{padding:12px 26px;background:var(--gold);color:var(--void);border:none;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.36em;text-transform:uppercase;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%);transition:background .3s}
+.adm-save:hover{background:var(--gold2)}
+.adm-cancel{padding:12px 20px;background:transparent;border:1px solid rgba(248,244,255,.1);color:var(--stone);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;transition:all .3s}
+.adm-cancel:hover{border-color:rgba(248,244,255,.28);color:var(--star)}
+.adm-msg{padding:11px 15px;font-size:12px;letter-spacing:.1em;margin-bottom:13px;display:none}
+.adm-msg.ok{display:block;background:rgba(13,104,48,.3);border:1px solid rgba(45,184,96,.24);color:#7df5a0}
+.adm-msg.err{display:block;background:rgba(192,56,40,.2);border:1px solid rgba(192,56,40,.3);color:rgba(248,100,100,.9)}
+.rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.rev-c{padding:18px;background:rgba(248,244,255,.03);border:1px solid rgba(78,62,150,.14);text-align:center}
+.rev-n{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--gold);line-height:1}
+.rev-l{font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--ash);margin-top:4px}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.course-grid{grid-template-columns:1fr 1fr}.cc-feat{grid-column:span 2}.ft-grid{grid-template-columns:1fr 1fr;gap:26px}.ft-grid>div:first-child{grid-column:span 2}.adm-stats{grid-template-columns:1fr 1fr}.rev-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  #nav{padding:13px 17px}#nav.stuck{padding:10px 17px}.nav-links{display:none}.ham{display:flex}
+  #about{grid-template-columns:1fr}.about-vis{min-height:52vw}.about-copy::before{display:none}
+  #guide-sec{grid-template-columns:1fr}.gs-demo{display:none}
+  #contact{grid-template-columns:1fr}.ct-l{border-bottom:1px solid rgba(78,62,150,.14)}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .vcall-inner{grid-template-columns:1fr}
+  .cc-feat{grid-column:span 2;grid-template-columns:1fr}.cf-body{padding:clamp(20px,4%,34px)}
+  .adm-form{grid-template-columns:1fr}.adm-form-full,.adm-foot{grid-column:span 1}
+  .rev-cards{grid-template-columns:1fr}.adm-row{grid-template-columns:1fr auto}
+}
+@media(max-width:600px){
+  .course-grid{grid-template-columns:1fr}.cc-feat{grid-column:span 1}
+  .testi-grid{grid-template-columns:1fr}.ft-grid{grid-template-columns:1fr}.ft-grid>div:first-child{grid-column:span 1}
+  .h-geo{display:none}.admin-panel{clip-path:none}.modal-box{clip-path:none}
+  .vid-wrap{width:100vw}.vid-modal{padding:0}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-bg"></div>
+  <div class="ld-stars" id="ldStars"></div>
+  <div class="ld-ring r1"></div>
+  <div class="ld-ring r2"></div>
+  <div class="ld-ring r3"></div>
+  <div class="ld-fr tl"></div><div class="ld-fr tr"></div>
+  <div class="ld-fr bl"></div><div class="ld-fr br"></div>
+  <div class="ld-logo">
+    <div class="ld-sym">☽✦☾</div>
+    <div class="ld-name">Talat Mazhar</div>
+    <div class="ld-title">Spiritual Sciences</div>
+    <div class="ld-orn"><div class="ld-gem">✦</div></div>
+    <div class="ld-sub">The Inward Path</div>
+  </div>
+  <div class="ld-bar"><div class="ld-fill" id="ldFill"></div></div>
+  <div class="ld-pct" id="ldPct">00</div>
+</div>
+<script>
+(function(){
+  var c=document.getElementById('ldStars');
+  for(var i=0;i<60;i++){var s=document.createElement('div');var sz=Math.random()<.14?2:1;s.style.cssText='position:absolute;border-radius:50%;background:#f8f4ff;width:'+sz+'px;height:'+sz+'px;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;animation:sP '+(2+Math.random()*4)+'s '+(Math.random()*4)+'s ease-in-out infinite alternate';c.appendChild(s);}
+  var fill=document.getElementById('ldFill'),pct=document.getElementById('ldPct'),loader=document.getElementById('loader'),n=0;
+  var t=setInterval(function(){n+=Math.floor(Math.random()*16)+8;if(n>=100)n=100;if(fill)fill.style.width=n+'%';if(pct)pct.textContent=(n<10?'0':'')+n;if(n>=100)clearInterval(t);},55);
+  setTimeout(function(){if(loader)loader.classList.add('gone');},1900);
+  setTimeout(function(){if(loader)loader.style.display='none';},4000);
+})();
+</script>
+
+<div id="grain"></div>
+<div id="cur"><div class="c-dot"></div><div class="c-ring"></div></div>
+<div id="ann">New — 1v1 Sessions with Talat Sahib Now Available &nbsp;·&nbsp; <a href="#vcall">Book Now →</a></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="brand">
+    <div class="brand-sym">☽</div>
+    <div class="brand-text"><div class="brand-name">Talat Mazhar</div><div class="brand-sub">Spiritual Sciences</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#vcall" class="hot">1v1 Sessions</a></li>
+    <li><a href="#about">The Teacher</a></li>
+    <li><a href="#testi">Stories</a></li>
+    <li><a href="#guide-sec">AI Guide</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <button class="nav-btn stu" id="navStuBtn" onclick="handleStuNav()">Student Login</button>
+    <button class="nav-btn" onclick="openAdmin()">Admin ⚙</button>
+    <button class="ham" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav id="mobnav">
+  <a href="#courses" class="mob-a" onclick="toggleMob()">Courses</a>
+  <a href="#vcall" class="mob-a" style="color:var(--gold)" onclick="toggleMob()">1v1 Sessions</a>
+  <a href="#about" class="mob-a" onclick="toggleMob()">The Teacher</a>
+  <a href="#testi" class="mob-a" onclick="toggleMob()">Stories</a>
+  <a href="#guide-sec" class="mob-a" onclick="toggleMob()">AI Guide</a>
+  <a href="#contact" class="mob-a" onclick="toggleMob()">Contact</a>
+  <a href="#" class="mob-a" style="font-size:.85em;letter-spacing:.28em;color:var(--stone)" onclick="toggleMob();handleStuNav()">Student Portal</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-vid">
+    <!-- ADD YOUR SUPABASE VIDEO URL BELOW — e.g. https://xxx.supabase.co/storage/v1/object/public/talat/hero-bg.mp4 -->
+    <video id="vid-hero" muted loop playsinline preload="auto"><source src="" type="video/mp4"></video>
+  </div>
+  <div class="h-cosmos"></div><div class="h-neb"></div><div class="h-scan"></div>
+  <div class="h-stars" id="hStars"></div>
+  <div class="h-geo">
+    <div class="geo-r"><div class="geo-dot"></div></div>
+    <div class="geo-r"></div><div class="geo-r"></div><div class="geo-r"></div><div class="geo-r"></div>
+  </div>
+  <div class="h-grid" id="hGrid"></div>
+  <div class="hero-c">
+    <p class="h-ey" id="hEy">The Inward Path · Pakistan</p>
+    <h1 class="h1">
+      <span class="hl"><span class="hw" id="hw0">Where</span> <span class="hw" id="hw1">The</span></span>
+      <span class="hl"><span class="hw" id="hw2"><em>Soul</em></span> <span class="hw" id="hw3"><em>Turns</em></span></span>
+      <span class="hl"><span class="hw" id="hw4"><span class="dim">Toward Light.</span></span></span>
+    </h1>
+    <p class="h-verse" id="hV">"Knock, and He'll open the door.<br>Vanish, and He'll make you shine like the sun."<br><span style="font-size:11px;letter-spacing:.28em;color:var(--ash);font-style:normal">— Rumi, Masnavi</span></p>
+    <div class="h-btns" id="hBtns">
+      <a href="#courses" class="btn-gold"><span>Explore Courses</span><span>→</span></a>
+      <a href="#vcall" class="btn-ghost">Book 1v1 Session</a>
+    </div>
+  </div>
+  <div class="h-scr" id="hScr"><div class="scrl"></div><span class="scrl-t">Scroll</span></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker"><div class="tick-track">
+  <span class="tick-item">Sufism &amp; Islamic Mysticism<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Sacred Numerology<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Meditation Sciences<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Eschatology<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Rumi &amp; Ibn Arabi<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Spiritual Healing<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Vibration &amp; Frequency<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Dream Interpretation<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Comparative Religion<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Yoga &amp; Breathwork<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Sufism &amp; Islamic Mysticism<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Sacred Numerology<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Meditation Sciences<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Eschatology<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Rumi &amp; Ibn Arabi<span class="tick-gem"> ✦ </span></span>
+  <span class="tick-item">Spiritual Healing<span class="tick-gem"> ✦ </span></span>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-vis rvl">
+    <!-- REPLACE with your Supabase photo URL -->
+    <img class="about-img" src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80" alt="Talat Mazhar" loading="lazy">
+    <div class="about-frame"></div>
+  </div>
+  <div class="about-copy sec rvr">
+    <div class="eyebrow">The Teacher</div>
+    <h2 class="sec-h">A Lifetime on the <em>Inward Path</em></h2>
+    <blockquote class="about-quote">"The seeker does not find the path. The path finds the seeker who has grown quiet enough to hear it."</blockquote>
+    <p class="about-p">Talat Mazhar has devoted over three decades to the living transmission of the sacred sciences — Sufism, spiritual numerology, meditation, eschatology, comparative religion, and the wisdom traditions of the East.</p>
+    <p class="about-p">His teachings draw from Rumi, Ibn Arabi, Iqbal, and oral lineages rarely accessible outside closed circles. Taught in Urdu and English to students across Pakistan and beyond.</p>
+    <div class="about-stats">
+      <div class="rv d1"><div class="ast-n">30+</div><div class="ast-l">Years</div></div>
+      <div class="rv d2"><div class="ast-n" id="stuCount">5K+</div><div class="ast-l">Students</div></div>
+      <div class="rv d3"><div class="ast-n" id="crsCount">—</div><div class="ast-l">Courses</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="sec">
+  <div class="courses-head">
+    <div class="rv"><div class="eyebrow">Sacred Knowledge</div><h2 class="sec-h">The <em>Courses</em></h2></div>
+    <div class="filters rv d2">
+      <button class="fil on" onclick="filt('all',this)">All</button>
+      <button class="fil" onclick="filt('sufism',this)">Sufism</button>
+      <button class="fil" onclick="filt('meditation',this)">Meditation</button>
+      <button class="fil" onclick="filt('numerology',this)">Numerology</button>
+      <button class="fil" onclick="filt('healing',this)">Healing</button>
+      <button class="fil" onclick="filt('eschatology',this)">Eschatology</button>
+      <button class="fil" onclick="filt('religion',this)">Religions</button>
+    </div>
+  </div>
+  <div class="course-grid" id="courseGrid">
+    <div style="grid-column:span 3;text-align:center;padding:60px;color:var(--ash);font-size:13px;letter-spacing:.2em">Loading courses...</div>
+  </div>
+</section>
+
+<!-- 1V1 SECTION -->
+<section id="vcall" class="sec">
+  <div class="vcall-inner">
+    <div class="vcall-info rv">
+      <div class="eyebrow">Personal Guidance</div>
+      <h2 class="sec-h">1v1 Sessions with <em>Talat Sahib</em></h2>
+      <p style="font-size:13px;font-weight:300;line-height:2;color:var(--stone);max-width:420px;margin-bottom:10px">A private WhatsApp video call with Talat Mazhar himself. Ask what you cannot ask in a group. Receive guidance tailored entirely to your spiritual station.</p>
+      <div class="vcall-how">
+        <div class="vcall-step"><div class="v-num">01</div><div class="v-step-t"><strong>Choose your package</strong>Select the session length that suits your needs.</div></div>
+        <div class="vcall-step"><div class="v-num">02</div><div class="v-step-t"><strong>Send payment</strong>JazzCash, EasyPaisa, bank transfer or card. Confirmed via WhatsApp within 24 hours.</div></div>
+        <div class="vcall-step"><div class="v-num">03</div><div class="v-step-t"><strong>Receive your call</strong>Talat Sahib's team schedules your private WhatsApp video call directly.</div></div>
+        <div class="vcall-step"><div class="v-num">04</div><div class="v-step-t"><strong>Your private session</strong>Sacred and confidential. No recording without your consent.</div></div>
+      </div>
+    </div>
+    <div class="vcall-card rv d2">
+      <div class="vc-head"><div class="vc-icon">◉</div><div><div class="vc-t">Book a Private Session</div><div class="vc-s">With Talat Mazhar · Via WhatsApp Video</div></div></div>
+      <div class="vc-pkgs" id="vcPkgs"></div>
+      <p class="vc-note">All sessions are strictly confidential. Availability is limited to 5 students per week. Payment confirmed via WhatsApp before the call is scheduled.</p>
+      <button class="btn-gold" style="width:100%;justify-content:center" onclick="bookVCall()"><span>Book via WhatsApp</span><span>→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- WISDOM -->
+<div id="wisdom">
+  <div class="wis-geo"></div><div class="wis-glow"></div>
+  <div class="wis-c rv">
+    <div class="wis-sym">☽✦☾</div>
+    <p class="wis-q">Out beyond ideas of wrongdoing and rightdoing, there is a field. I'll meet you there. When the soul lies down in that grass, the world is too full to talk about.</p>
+    <p class="wis-attr">— <span>Jalal al-Din Rumi</span></p>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testi" class="sec">
+  <div class="rv"><div class="eyebrow">Student Voices</div><h2 class="sec-h">Voices of the <em>Journey</em></h2></div>
+  <div class="testi-grid rv d2">
+    <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">Talat Sahib's course on Sufi meditation changed how I understand silence. I have never felt closer to my own soul.</p><div class="tc-name">Fatima K.</div><div class="tc-loc">Lahore, Pakistan</div></div>
+    <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">The 1v1 session was extraordinary. He answered questions I have carried for twenty years in forty-five minutes. Life-changing.</p><div class="tc-name">Ibrahim Al-Rashid</div><div class="tc-loc">Dubai, UAE</div></div>
+    <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">I have studied with many teachers. Talat Mazhar speaks from genuine experience, not books. You feel the difference immediately.</p><div class="tc-name">Sarah Thompson</div><div class="tc-loc">London, UK</div></div>
+  </div>
+</section>
+
+<!-- AI GUIDE SECTION -->
+<section id="guide-sec">
+  <div class="gs-glow"></div>
+  <div class="gs-inner rvl">
+    <div class="eyebrow">AI Spiritual Companion</div>
+    <h2 class="guide-name">Meet <em>Noor.</em></h2>
+    <div class="guide-lim">Response limit: <span>10 per visitor</span> · Free</div>
+    <p class="guide-body">Noor is your personal guide through the teachings of Talat Mazhar. She knows every course, every price, and every wisdom tradition — and speaks with the depth the path demands. Responds in Urdu or English.</p>
+    <div class="gfeats">
+      <div class="gfeat"><div class="gfeat-i">✦</div><div class="gfeat-t"><strong>Full Spiritual Companion</strong>Discuss Rumi, Quran, Ibn Arabi, Iqbal — real depth, no scripts.</div></div>
+      <div class="gfeat"><div class="gfeat-i">☽</div><div class="gfeat-t"><strong>Course Guidance</strong>Personalised recommendations for your stage of the journey.</div></div>
+      <div class="gfeat"><div class="gfeat-i">◎</div><div class="gfeat-t"><strong>Bilingual</strong>Responds in Urdu or English — whichever you speak.</div></div>
+      <div class="gfeat"><div class="gfeat-i">◈</div><div class="gfeat-t"><strong>Sales &amp; Enrollment</strong>Prices, packages, 1v1 sessions — complete answers instantly.</div></div>
+    </div>
+    <button class="btn-gold" onclick="openGuide()"><span>Speak with Noor</span><span>→</span></button>
+  </div>
+  <div class="gs-demo rvr">
+    <div class="gd-hd"><div><div class="gd-n">NOOR</div><div class="gd-s">Spiritual Guide · Online</div></div><div class="gd-b">Talat Mazhar ✦</div></div>
+    <div class="gd-msgs">
+      <div class="gdm u"><div class="gdl">You</div><div class="gdb">What is the difference between fana and baqa?</div></div>
+      <div class="gdm a"><div class="gdl">Noor</div><div class="gdb">Fana is the annihilation of the ego-self — the dissolving of all that is not God. Baqa is what subsists after: presence in God once the ego has burned away. Ibn Arabi described the polished mirror showing only the Beloved. Talat Sahib explores both in The Secrets of Rumi.</div></div>
+    </div>
+    <div class="gd-inp"><div class="gd-fake">Ask anything about the teachings...</div><div class="gd-arr">→</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="ct-l rvl">
+    <div class="eyebrow">Contact</div>
+    <h2 class="sec-h" style="margin-bottom:26px">Begin the <em>Conversation.</em></h2>
+    <div class="ct-det"><label>WhatsApp</label><a href="#" id="ctWA">+92 300 000 0000</a></div>
+    <div class="ct-det"><label>Email</label><a href="mailto:talat@talatmazhar.com">talat@talatmazhar.com</a></div>
+    <div class="ct-det"><label>Language</label><span>Urdu &amp; English</span></div>
+    <div class="ct-det"><label>Based In</label><span>Pakistan</span></div>
+    <a href="#" class="btn-wa" id="ctWABtn">✉ &nbsp;Message on WhatsApp</a>
+  </div>
+  <div class="ct-r rvr">
+    <div class="eyebrow">Enquiry</div>
+    <div class="ff"><input type="text" id="fn" placeholder=" " autocomplete="name"><label for="fn">Full Name / اپنا نام</label><div class="ff-ln"></div></div>
+    <div class="ff"><input type="email" id="fe" placeholder=" " autocomplete="email"><label for="fe">Email</label><div class="ff-ln"></div></div>
+    <div class="ff"><input type="text" id="fs" placeholder=" "><label for="fs">Subject / موضوع</label><div class="ff-ln"></div></div>
+    <div class="ff"><textarea id="fm" placeholder=" " rows="4"></textarea><label for="fm">Message / پیغام</label><div class="ff-ln"></div></div>
+    <button class="btn-send" onclick="sendMsg()"><span>Send Message →</span></button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <a href="#" class="brand"><div class="brand-sym" style="font-size:18px">☽</div><div class="brand-text"><div class="brand-name">Talat Mazhar</div><div class="brand-sub">Spiritual Sciences</div></div></a>
+      <p class="ft-copy">Courses in Sufism, meditation, sacred numerology, eschatology and spiritual transformation. Taught in Urdu &amp; English.</p>
+    </div>
+    <div class="ft-col"><h5>Courses</h5><ul id="ftLinks"><li><a href="#courses">All Courses</a></li></ul></div>
+    <div class="ft-col"><h5>The Path</h5><ul><li><a href="#about">The Teacher</a></li><li><a href="#vcall">1v1 Sessions</a></li><li><a href="#testi">Student Stories</a></li><li><a href="#guide-sec">AI Guide Noor</a></li></ul></div>
+    <div class="ft-col"><h5>Connect</h5><ul><li><a href="#" id="ftWA">WhatsApp</a></li><li><a href="#contact">Contact</a></li><li><a href="mailto:talat@talatmazhar.com">Email</a></li><li><a href="#" onclick="openAdmin()">Admin Login</a></li></ul></div>
+  </div>
+  <div class="ft-bot"><p>© 2026 Talat Mazhar Spiritual Sciences. All rights reserved.</p><p>Pakistan · Urdu &amp; English · The Inward Path</p></div>
+</footer>
+
+<!-- NOOR WIDGET -->
+<button class="guide-fab" id="guideFab" onclick="toggleGuide()">☽</button>
+<div class="guide-panel" id="guidePanel">
+  <div class="gp-hd">
+    <div><div class="gp-nm">NOOR</div><div class="gp-st">Spiritual Guide · Online</div></div>
+    <div class="gp-lim">Responses: <span id="noorLimTxt">10</span> left</div>
+  </div>
+  <div class="gp-msgs" id="gpMsgs">
+    <div class="nm a"><div class="nml">Noor</div><div class="nmb">As-salamu alaykum. I am Noor — your companion through the teachings of Talat Mazhar. Ask me anything: courses, prices, 1v1 sessions, or questions of the spirit. I respond in Urdu or English.</div></div>
+  </div>
+  <div class="gp-typing" id="gpTyping"><div class="typing"><span></span><span></span><span></span></div></div>
+  <div class="gp-lim-warn" id="noorWarn">You have used your 10 free responses. <a href="#contact" style="color:var(--gold)" onclick="toggleGuide()">Contact us</a> or enroll for unlimited access.</div>
+  <div class="gp-quick" id="gpQ">
+    <button class="gp-qb" onclick="qSend('Where should I begin my spiritual journey?')">Where to Begin</button>
+    <button class="gp-qb" onclick="qSend('Tell me about the 1v1 sessions')">1v1 Sessions</button>
+    <button class="gp-qb" onclick="qSend('سفر شروع کرنے کے بارے میں بتائیں')">اردو میں</button>
+    <button class="gp-qb" onclick="qSend('Show me all courses and prices')">All Courses</button>
+  </div>
+  <div class="gp-inp-row" id="gpInpRow">
+    <input class="gp-inp" id="gpInp" placeholder="Ask Noor... / نور سے پوچھیں" onkeydown="if(event.key==='Enter')noorSend()">
+    <button class="gp-send" onclick="noorSend()">→</button>
+  </div>
+</div>
+
+<!-- ENROLL MODAL -->
+<div class="modal-veil" id="enrollVeil" onclick="if(event.target===this)closeEnroll()">
+  <div class="modal-box">
+    <button class="m-x" onclick="closeEnroll()">✕</button>
+    <div class="m-sym" id="emSym">✦</div>
+    <div class="m-title" id="emTitle">Course</div>
+    <div class="m-price" id="emPrice">PKR 0</div>
+    <div class="m-vcall-note" id="emVcall" style="display:none">◉ Includes 1v1 WhatsApp video session with Talat Sahib</div>
+    <div class="m-fields">
+      <div class="m-field"><label>Full Name / اپنا نام</label><input type="text" id="emName" placeholder="Your name" autocomplete="name"></div>
+      <div class="m-field"><label>WhatsApp Number</label><input type="tel" id="emPhone" placeholder="+92 300 0000000" autocomplete="tel"></div>
+      <div class="m-field"><label>Email</label><input type="email" id="emEmail" placeholder="your@email.com" autocomplete="email"></div>
+      <div class="m-field">
+        <label>Payment Method</label>
+        <div class="m-pay-row">
+          <button class="m-pay-btn on" onclick="selPay('whatsapp',this)">WhatsApp</button>
+          <button class="m-pay-btn" onclick="selPay('jazzcash',this)">JazzCash</button>
+          <button class="m-pay-btn" onclick="selPay('easypaisa',this)">EasyPaisa</button>
+          <button class="m-pay-btn" onclick="selPay('card',this)">Card (Stripe)</button>
+        </div>
+      </div>
+    </div>
+    <div class="m-btns">
+      <button class="btn-enroll-wa" id="eWABtn" onclick="doEnrollWA()"><span>Enroll via WhatsApp →</span></button>
+      <button class="btn-stripe" id="eStripeBtn" onclick="doEnrollStripe()" style="display:none"><span>Pay with Card →</span></button>
+    </div>
+    <div class="m-err" id="enrollErr"></div>
+    <div class="m-ok" id="enrollOk"></div>
+  </div>
+</div>
+
+<!-- STUDENT LOGIN -->
+<div class="modal-veil" id="stuLoginVeil" onclick="if(event.target===this)closeStuLogin()">
+  <div class="modal-box">
+    <button class="m-x" onclick="closeStuLogin()">✕</button>
+    <div class="m-sym">☽</div>
+    <div class="m-title">Student Portal</div>
+    <p class="m-sub">Access your enrolled courses and session links after payment approval.</p>
+    <div class="m-fields">
+      <div class="m-field"><label>Email</label><input type="email" id="stuEmail" placeholder="your@email.com" autocomplete="email"></div>
+      <div class="m-field"><label>Password</label><input type="password" id="stuPw" placeholder="••••••••" onkeydown="if(event.key==='Enter')stuLogin()"></div>
+    </div>
+    <p style="font-size:11px;color:var(--ash);margin-top:12px;letter-spacing:.08em">Your account is created by the admin after payment confirmation.</p>
+    <div class="m-btns"><button class="btn-enroll-wa" style="background:var(--violet)" onclick="stuLogin()"><span>Login to Portal →</span></button></div>
+    <div class="m-err" id="stuErr"></div>
+  </div>
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div class="modal-veil" id="stuDashVeil" onclick="void(0)">
+  <div class="modal-box" style="max-width:700px">
+    <button class="m-x" onclick="closeStuDash()">✕</button>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px">
+      <div><span style="font-size:20px;color:var(--gold);margin-right:8px">☽</span><span id="stuDashName" style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--star)">Dashboard</span></div>
+      <button onclick="stuLogout()" style="background:none;border:1px solid rgba(248,244,255,.1);color:var(--ash);padding:7px 14px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-family:'Jost',sans-serif;transition:all .3s" onmouseover="this.style.color='var(--star)'" onmouseout="this.style.color='var(--ash)'">Logout</button>
+    </div>
+    <div id="stuDashContent"></div>
+  </div>
+</div>
+
+<!-- VIDEO PLAYER MODAL -->
+<div class="vid-modal" id="vidModal">
+  <div class="vid-wrap">
+    <div class="vid-header">
+      <div class="vid-title" id="vidTitle">Course Video</div>
+      <button class="vid-close" onclick="closeVidModal()">✕</button>
+    </div>
+    <video id="vidPlayer" controls preload="metadata" style="width:100%;background:#000;max-height:58vh">
+      <source id="vidSrc" src="" type="video/mp4">
+    </video>
+    <div class="vid-list" id="vidList"></div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminVeil">
+  <div class="admin-panel">
+    <div id="admGate" class="adm-gate">
+      <div style="font-size:30px;color:var(--gold)">⚙</div>
+      <h3>Administrator Access</h3>
+      <p>Enter your admin password to manage the platform.</p>
+      <input type="password" class="adm-pw" id="admPw" placeholder="Password" onkeydown="if(event.key==='Enter')admLogin()">
+      <div class="adm-err" id="admErr">Incorrect password.</div>
+      <button class="adm-save" onclick="admLogin()">Enter Admin Panel</button>
+      <button onclick="closeAdmin()" style="background:none;border:none;color:var(--ash);font-size:12px;letter-spacing:.2em;margin-top:-8px">Cancel</button>
+    </div>
+    <div id="admMain" style="display:none">
+      <div class="adm-hd"><h2>⚙ Talat Mazhar — Admin Panel</h2><button class="adm-x" onclick="closeAdmin()">✕</button></div>
+      <div class="adm-tabs">
+        <button class="adm-tab on" onclick="admTab('dash',this)">Dashboard</button>
+        <button class="adm-tab" onclick="admTab('courses',this)">Courses</button>
+        <button class="adm-tab" onclick="admTab('add',this)" id="addTabBtn">+ Add Course</button>
+        <button class="adm-tab" onclick="admTab('students',this)">Students</button>
+        <button class="adm-tab" onclick="admTab('revenue',this)">Revenue</button>
+        <button class="adm-tab" onclick="admTab('broadcast',this)">Broadcast</button>
+        <button class="adm-tab" onclick="admTab('settings',this)">Settings</button>
+      </div>
+      <div class="adm-body">
+        <div class="adm-sec on" id="adm-dash">
+          <div class="adm-stats" id="admStats"></div>
+          <div style="font-size:11px;color:var(--ash);letter-spacing:.1em">API: <span id="apiStat" style="color:var(--jade)">Checking...</span></div>
+        </div>
+        <div class="adm-sec" id="adm-courses">
+          <div class="adm-msg" id="crsMsg"></div>
+          <div class="adm-list" id="admCrsList"></div>
+        </div>
+        <div class="adm-sec" id="adm-add">
+          <div class="adm-msg" id="formMsg"></div>
+          <div class="adm-form">
+            <input type="hidden" id="editId">
+            <div class="adm-field"><label>Title (English) *</label><input type="text" id="fTitle" placeholder="e.g. Introduction to Sufi Meditation"></div>
+            <div class="adm-field"><label>Title (Urdu)</label><input type="text" id="fTitleU" placeholder="مثال: صوفی مراقبہ کا تعارف"></div>
+            <div class="adm-field"><label>Category *</label>
+              <select id="fCat">
+                <option value="sufism">Sufism</option><option value="meditation">Meditation</option>
+                <option value="numerology">Numerology</option><option value="healing">Healing</option>
+                <option value="eschatology">Eschatology</option><option value="religion">Comparative Religion</option>
+                <option value="yoga">Yoga &amp; Frequency</option><option value="general">General</option>
+              </select>
+            </div>
+            <div class="adm-field"><label>Price (PKR) *</label><input type="number" id="fPrice" placeholder="3500"></div>
+            <div class="adm-field"><label>Original Price (PKR)</label><input type="number" id="fOrig" placeholder="5000"></div>
+            <div class="adm-field"><label>Duration</label><input type="text" id="fDur" placeholder="8 Weeks"></div>
+            <div class="adm-field"><label>Sessions</label><input type="text" id="fSess" placeholder="16 Sessions"></div>
+            <div class="adm-field adm-form-full"><label>Description (English) *</label><textarea id="fDesc" placeholder="Course description..."></textarea></div>
+            <div class="adm-field adm-form-full"><label>Description (Urdu)</label><textarea id="fDescU" placeholder="کورس کی تفصیل اردو میں..."></textarea></div>
+            <div class="adm-field"><label>Badge</label><select id="fBadge"><option value="">None</option><option value="new">New</option><option value="pop">Popular</option><option value="free">Free Preview</option></select></div>
+            <div class="adm-field"><label>Status</label><select id="fStatus"><option value="active">Active</option><option value="draft">Draft</option></select></div>
+            <div class="adm-field"><label>Includes 1v1 Call?</label><select id="fVcall"><option value="false">No</option><option value="true">Yes</option></select></div>
+            <div class="adm-field"><label>Sort Order</label><input type="number" id="fSort" value="0"></div>
+            <div class="adm-field adm-form-full"><label>Thumbnail URL (Supabase)</label><input type="text" id="fImg" placeholder="https://xxx.supabase.co/storage/v1/object/public/talat/thumb.jpg"></div>
+            <div class="adm-field adm-form-full"><label>Preview Video URL (Supabase — free to watch)</label><input type="text" id="fPrevVid" placeholder="https://xxx.supabase.co/storage/v1/object/public/talat/preview.mp4"></div>
+            <div class="adm-field adm-form-full"><label>What's Included (one per line)</label><textarea id="fIncludes" placeholder="Live sessions with Talat Sahib&#10;Full video recordings&#10;PDF course materials"></textarea></div>
+            <div class="adm-foot"><button class="adm-save" onclick="saveCourseAdm()"><span id="saveLbl">Save Course</span></button><button class="adm-cancel" onclick="resetForm()">Cancel</button></div>
+          </div>
+        </div>
+        <div class="adm-sec" id="adm-students">
+          <div class="adm-msg" id="stuMsg"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+            <div style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash)">Enrollment Requests</div>
+            <button class="adm-save" onclick="loadStudents()" style="font-size:9px;padding:9px 18px">↻ Refresh</button>
+          </div>
+          <div id="admStuList" class="adm-list"></div>
+        </div>
+        <div class="adm-sec" id="adm-revenue">
+          <div class="rev-cards" id="revCards"></div>
+          <div class="adm-list" id="revList"></div>
+        </div>
+        <div class="adm-sec" id="adm-broadcast">
+          <p style="font-size:12px;color:var(--stone);margin-bottom:18px;line-height:1.8">Update the announcement bar or send WhatsApp messages to all enrolled students.</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="adm-field"><label>Update Announcement Bar</label><input type="text" id="annText" placeholder="New Course Live — ..."></div>
+            <div class="adm-field"><label>Broadcast Message (Urdu / English)</label><textarea id="broadMsg" placeholder="Assalam o Alaikum dear students...&#10;السلام علیکم..."></textarea></div>
+            <div class="adm-field"><label>Send To</label><select id="broadTarget"><option value="all">All Students</option><option value="active">Active Only</option></select></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="adm-save" onclick="updateAnn()">Update Announcement</button>
+              <button class="adm-save" onclick="sendBroadcast()" style="background:var(--amethyst)">WhatsApp Broadcast</button>
+            </div>
+          </div>
+        </div>
+        <div class="adm-sec" id="adm-settings">
+          <div class="adm-form">
+            <div class="adm-field"><label>WhatsApp Number *</label><input type="text" id="sWA" placeholder="+92 300 0000000"></div>
+            <div class="adm-field"><label>Backend API URL (Render.com) *</label><input type="text" id="sAPI" placeholder="https://talat-backend.onrender.com"></div>
+            <div class="adm-field adm-form-full"><label>Supabase URL</label><input type="text" id="sSB" placeholder="https://xxxx.supabase.co"></div>
+            <div class="adm-field"><label>New Admin Password</label><input type="password" id="sNewPw" placeholder="New password"></div>
+            <div class="adm-field"><label>Confirm Password</label><input type="password" id="sConfPw" placeholder="Confirm"></div>
+            <div class="adm-foot"><button class="adm-save" onclick="saveSettings()">Save Settings</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════ CONFIG ═══════════════════════ */
+var CFG={WA:'923000000000',API:'https://your-backend.onrender.com',ADMIN_PASS:'talatmazhar2026'};
+try{var _c=localStorage.getItem('tm_cfg');if(_c)Object.assign(CFG,JSON.parse(_c));}catch(e){}
+function saveCFG(){try{localStorage.setItem('tm_cfg',JSON.stringify(CFG));}catch(e){}}
+var studentToken=localStorage.getItem('tm_student_token')||null;
+var studentData=null;try{var _sd=localStorage.getItem('tm_student_data');if(_sd)studentData=JSON.parse(_sd);}catch(e){}
+var adminToken=sessionStorage.getItem('tm_admin_token')||null;
+
+/* ═══════════════════════ FALLBACK COURSES ═══════════════════════ */
+/* These display when the API is offline. Replace image_url and preview_video_url
+   with your actual Supabase storage URLs after uploading. */
+var FALLBACK=[
+  {id:'f1',title:'Introduction to Sufi Meditation',title_urdu:'صوفی مراقبہ کا تعارف',category:'meditation',price:2800,original_price:3500,duration:'6 Weeks',sessions:'12 Sessions',description:'The foundational course of the path. Learn the art of stillness through the Sufi tradition — breath, dhikr, and presence. Suitable for all beginners.',badge:'pop',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&q=75',preview_video_url:'',includes:['12 live video sessions','Full recordings library','Guided dhikr audio','Personal Q&A access']},
+  {id:'f2',title:'The Secrets of Rumi',title_urdu:'رومی کے اسرار',category:'sufism',price:4500,original_price:6000,duration:'10 Weeks',sessions:'20 Sessions',description:'An immersive journey through the Masnavi and Divan-e-Shams — each verse a doorway inward. Taught with original Persian commentary.',badge:'new',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=75',preview_video_url:'',includes:['20 live sessions','Masnavi commentary notes','Personal translations by Talat Sahib','Certificate of completion']},
+  {id:'f3',title:'Sacred Numerology — Ilm ul Abjad',title_urdu:'علم الاعداد',category:'numerology',price:3200,original_price:null,duration:'8 Weeks',sessions:'16 Sessions',description:'The Islamic science of letters and numbers. Understand the hidden dimensions of names, dates, and the sacred geometry of existence.',badge:'',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=75',preview_video_url:'',includes:['16 sessions','Abjad calculation workbook','Personal name reading','Lifetime course access']},
+  {id:'f4',title:'The Art of Spiritual Healing',title_urdu:'روحانی علاج کا فن',category:'healing',price:5800,original_price:7500,duration:'12 Weeks',sessions:'24 Sessions',description:'Ruqyah, Asma ul Husna, and the Prophetic healing traditions. Learn to work with divine names and energy in service of wellbeing.',badge:'',status:'active',includes_vcall:true,image_url:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75',preview_video_url:'',includes:['24 sessions','Healing audio compendium','Case study analysis','1v1 session with Talat Sahib']},
+  {id:'f5',title:'Eschatology — The Science of the Hereafter',title_urdu:'علم آخرت',category:'eschatology',price:4200,original_price:null,duration:'8 Weeks',sessions:'16 Sessions',description:'Islamic eschatology through the Quran, Hadith, and the Sufi understanding of death, barzakh, and what lies beyond.',badge:'new',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=600&q=75',preview_video_url:'',includes:['16 sessions','Detailed study notes','Quran & Hadith source texts','Group reflection sessions']},
+  {id:'f6',title:'Wisdom Across Religions',title_urdu:'تمام مذاہب کی حکمت',category:'religion',price:3800,original_price:null,duration:'10 Weeks',sessions:'20 Sessions',description:'A sacred comparative journey across Islam, Christianity, Hinduism, Buddhism, and the perennial wisdom traditions — unity beneath diversity.',badge:'',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=75',preview_video_url:'',includes:['20 sessions','Comparative texts library','Guest scholars (select sessions)','Discussion community']},
+  {id:'f7',title:'Vibration, Frequency & the Soul',title_urdu:'روح اور تعدد',category:'yoga',price:3500,original_price:4500,duration:'6 Weeks',sessions:'12 Sessions',description:'Bridging ancient Sufi breathwork and modern frequency science. Sound, breath, and the body as instruments of spiritual awakening.',badge:'new',status:'active',includes_vcall:false,image_url:'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600&q=75',preview_video_url:'',includes:['12 sessions','Breathwork audio library','Frequency meditation tracks','Practice journal']},
+];
+var COURSES=[].concat(FALLBACK);
+
+/* ═══════════════════════ API HELPERS ═══════════════════════ */
+async function api(path,opts){
+  opts=opts||{};
+  var h={'Content-Type':'application/json'};
+  if(studentToken)h['Authorization']='Bearer '+studentToken;
+  Object.assign(h,opts.headers||{});
+  var r=await fetch(CFG.API+path,Object.assign({},opts,{headers:h}));
+  var d=await r.json();
+  if(!r.ok)throw new Error(d.error||'Request failed');
+  return d;
+}
+async function adminAPI(path,opts){
+  opts=opts||{};
+  var h={'Content-Type':'application/json','x-admin-token':adminToken||''};
+  var r=await fetch(CFG.API+path,Object.assign({},opts,{headers:h}));
+  var d=await r.json();
+  if(!r.ok)throw new Error(d.error||'Admin request failed');
+  return d;
+}
+async function loadCourses(){
+  try{
+    var d=await api('/api/courses');
+    if(d.courses&&d.courses.length){COURSES=d.courses;document.getElementById('apiStat')&&(document.getElementById('apiStat').textContent='Online ✓');}
+  }catch(e){console.log('API offline — using fallback courses');}
+  renderCourses('all');
+  var cc=document.getElementById('crsCount');if(cc)cc.textContent=COURSES.filter(function(c){return c.status==='active';}).length;
+}
+
+/* ═══════════════════════ STARS ═══════════════════════ */
+(function(){['hStars'].forEach(function(id){var c=document.getElementById(id);if(!c)return;for(var i=0;i<80;i++){var s=document.createElement('div');var sz=Math.random()<.14?2:1;s.className='hstar';s.style.cssText='width:'+sz+'px;height:'+sz+'px;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;--sd:'+(2+Math.random()*4)+'s;--sdel:'+(Math.random()*4)+'s';c.appendChild(s);}});})();
+
+/* ═══════════════════════ CURSOR ═══════════════════════ */
+if(window.matchMedia('(hover:hover)').matches){
+  var cur=document.getElementById('cur');if(cur)cur.style.display='block';
+  var dot=document.querySelector('.c-dot'),ring=document.querySelector('.c-ring');
+  var mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;if(dot){dot.style.left=mx+'px';dot.style.top=my+'px';}});
+  (function raf(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;if(ring){ring.style.left=rx+'px';ring.style.top=ry+'px';}requestAnimationFrame(raf);})();
+  function addH(s){document.querySelectorAll(s).forEach(function(el){el.addEventListener('mouseenter',function(){document.body.classList.add('cH');});el.addEventListener('mouseleave',function(){document.body.classList.remove('cH');});});}
+  function addV(s){document.querySelectorAll(s).forEach(function(el){el.addEventListener('mouseenter',function(){document.body.classList.add('cV');});el.addEventListener('mouseleave',function(){document.body.classList.remove('cV');});});}
+  window.addH=addH;window.addV=addV;
+  addH('a,button,.brand,.guide-fab');addV('.about-vis,.cc-vis');
+}else{window.addH=function(){};window.addV=function(){};}
+
+/* ═══════════════════════ HERO ═══════════════════════ */
+function heroIn(){
+  setTimeout(function(){var g=document.getElementById('hGrid');if(g)g.classList.add('on');},300);
+  var ey=document.getElementById('hEy');if(ey)ey.classList.add('on');
+  ['hw0','hw1','hw2','hw3','hw4'].forEach(function(id,i){setTimeout(function(){var el=document.getElementById(id);if(el)el.classList.add('on');},180+i*155);});
+  setTimeout(function(){var v=document.getElementById('hV');if(v)v.classList.add('on');},980);
+  setTimeout(function(){var b=document.getElementById('hBtns');if(b)b.classList.add('on');},1180);
+  setTimeout(function(){var s=document.getElementById('hScr');if(s)s.classList.add('on');},1440);
+}
+setTimeout(heroIn,2000);
+
+/* ═══════════════════════ VIDEO SYSTEM ═══════════════════════ */
+var isMob=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+function bootVid(id){
+  var v=document.getElementById(id);if(!v)return;
+  var src=v.querySelector('source');if(!src||!src.src||src.src===window.location.href)return;
+  v.play().catch(function(){});
+  v.addEventListener('playing',function(){v.classList.add('live');},{once:true});
+  new IntersectionObserver(function(ee){ee.forEach(function(e){e.isIntersecting?v.play().catch(function(){}):v.pause();});},{threshold:.05}).observe(v);
+}
+window.addEventListener('load',function(){setTimeout(function(){bootVid('vid-hero');},400);});
+
+/* ═══════════════════════ NAV ═══════════════════════ */
+var annG=false;
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('nav'),ann=document.getElementById('ann');
+  nav.classList.toggle('stuck',scrollY>80);
+  if(scrollY>80&&!annG){if(ann)ann.classList.add('hidden');annG=true;nav.style.top='0';}
+});
+document.addEventListener('visibilitychange',function(){var g=document.getElementById('grain');if(g)g.style.animationPlayState=document.hidden?'paused':'running';});
+var mobOpen=false;
+function toggleMob(){mobOpen=!mobOpen;document.getElementById('ham').classList.toggle('x',mobOpen);document.getElementById('mobnav').classList.toggle('on',mobOpen);document.body.style.overflow=mobOpen?'hidden':'';}
+function updateWALinks(){
+  var n=CFG.WA,wa='https://wa.me/'+n;
+  var el=document.getElementById('ctWA');if(el){el.href=wa;el.textContent='+'+n;}
+  var btn=document.getElementById('ctWABtn');if(btn)btn.href=wa+'?text=Assalam%20o%20Alaikum%20Talat%20Sahib';
+  var ft=document.getElementById('ftWA');if(ft)ft.href=wa;
+}
+
+/* ═══════════════════════ SCROLL REVEAL ═══════════════════════ */
+var ro=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.08});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ro.observe(el);});
+
+/* ═══════════════════════ VCALL ═══════════════════════ */
+var VPKGS=[
+  {id:'v1',name:'30-Minute Session',name_u:'30 منٹ کی نشست',desc:'One focused question or topic',price:3500},
+  {id:'v2',name:'60-Minute Session',name_u:'60 منٹ کی نشست',desc:'Deep dive — life guidance, spiritual diagnosis',price:6000},
+  {id:'v3',name:'90-Minute Session',name_u:'90 منٹ کی نشست',desc:'Comprehensive — multiple topics, ongoing guidance',price:8500},
+];
+var selPkg=VPKGS[1];
+function renderVcall(){var c=document.getElementById('vcPkgs');if(!c)return;c.innerHTML=VPKGS.map(function(p){return'<div class="vpkg'+(p.id===selPkg.id?' on':'')+'" onclick="selVPkg(\''+p.id+'\',this)"><div><div class="vpkg-name">'+p.name+' — '+p.name_u+'</div><div class="vpkg-desc">'+p.desc+'</div></div><div class="vpkg-price">PKR '+p.price.toLocaleString()+'</div></div>';}).join('');}
+function selVPkg(id,el){selPkg=VPKGS.find(function(p){return p.id===id;})||selPkg;document.querySelectorAll('.vpkg').forEach(function(b){b.classList.remove('on');});el.classList.add('on');}
+function bookVCall(){var msg='Assalam%20o%20Alaikum%2C%0A%0AI%20would%20like%20to%20book%20a%20private%201v1%20WhatsApp%20session%3A%0A%0A*'+encodeURIComponent(selPkg.name)+'*%0A'+encodeURIComponent(selPkg.name_u)+'%0APrice%3A%20PKR%20'+selPkg.price.toLocaleString()+'%0A%0APlease%20share%20payment%20details%20and%20available%20times.';window.open('https://wa.me/'+CFG.WA+'?text='+msg,'_blank');}
+
+/* ═══════════════════════ HELPERS ═══════════════════════ */
+function catLbl(c){return{sufism:'Sufism',meditation:'Meditation',numerology:'Numerology',healing:'Healing',eschatology:'Eschatology',religion:'Comparative Religion',yoga:'Vibration & Frequency',general:'General'}[c]||c;}
+function catSym(c){return{sufism:'☽',meditation:'◎',numerology:'✦',healing:'◈',eschatology:'☾',religion:'◇',yoga:'∿',general:'✦'}[c]||'✦';}
+
+/* ═══════════════════════ COURSES RENDER ═══════════════════════ */
+function renderCourses(f){
+  var list=f==='all'?COURSES.filter(function(c){return c.status==='active';}):COURSES.filter(function(c){return c.category===f&&c.status==='active';});
+  var grid=document.getElementById('courseGrid');
+  if(!list.length){grid.innerHTML='<div style="grid-column:span 3;text-align:center;padding:60px;color:var(--ash);font-size:13px;letter-spacing:.2em">No courses in this category yet.</div>';return;}
+  var html='',cards=list;
+  if(f==='all'&&list.length){
+    var feat=list[0];cards=list.slice(1);
+    var fp=feat.original_price?'<div class="cf-price">PKR '+feat.price.toLocaleString()+'</div><div class="cc-orig" style="font-size:15px;color:var(--ash);text-decoration:line-through;align-self:center">PKR '+feat.original_price.toLocaleString()+'</div>':'<div class="cf-price">PKR '+feat.price.toLocaleString()+'</div>';
+    var fvid=feat.preview_video_url?'<video muted loop playsinline autoplay style="width:100%;height:100%;object-fit:cover;filter:brightness(.7)"><source src="'+feat.preview_video_url+'" type="video/mp4"></video>':'<img src="'+(feat.image_url||'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&q=75')+'" alt="'+feat.title+'" loading="eager">';
+    html+='<div class="cc-feat rv"><div class="cc-vis">'+fvid+'<div class="cc-ov"></div><div class="cc-cat">'+catLbl(feat.category)+'</div>'+(feat.preview_video_url?'<div class="cc-play"><button class="cc-play-btn" onclick="playPreview(\''+feat.id+'\',\''+feat.preview_video_url+'\',\''+feat.title+'\')">▶</button></div>':'')+'</div><div class="cf-body"><div class="cf-tag">Signature Course</div><div class="cf-title">'+feat.title+'</div>'+(feat.title_urdu?'<div class="cf-urdu">'+feat.title_urdu+'</div>':'')+'<div class="cc-teacher">Talat Mazhar</div><div class="cf-desc">'+feat.description+'</div>'+(feat.includes_vcall?'<div class="cc-vcall">Includes 1v1 WhatsApp Session</div>':'')+(feat.includes&&feat.includes.length?'<div class="cf-includes">'+feat.includes.slice(0,4).map(function(i){return'<div class="cf-inc">'+i+'</div>';}).join('')+'</div>':'')+'<div class="cf-foot"><div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">'+fp+'</div><button class="btn-gold" onclick="openEnroll(\''+feat.id+'\')"><span>Enroll Now</span><span>→</span></button></div></div></div>';
+  }
+  cards.forEach(function(c,i){
+    var sp=c.original_price?'<div class="cc-orig">PKR '+c.original_price.toLocaleString()+'</div><div class="cc-disc">'+Math.round((1-c.price/c.original_price)*100)+'% Off</div>':'';
+    var vis=c.preview_video_url?'<video muted loop playsinline autoplay style="width:100%;height:100%;object-fit:cover;filter:brightness(.7)"><source src="'+c.preview_video_url+'" type="video/mp4"></video>':'<img src="'+(c.image_url||'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=600&q=75')+'" alt="'+c.title+'" loading="lazy">';
+    html+='<div class="cc rv" style="transition-delay:'+(0.1+i*0.08)+'s"><div class="cc-glow"></div><div class="cc-vis">'+vis+'<div class="cc-ov"></div><div class="cc-cat">'+catSym(c.category)+' '+catLbl(c.category)+'</div>'+(c.badge?'<div class="cc-badge '+c.badge+'">'+(c.badge==='new'?'New':c.badge==='pop'?'Popular':'Free Preview')+'</div>':'')+(c.preview_video_url?'<div class="cc-play"><button class="cc-play-btn" onclick="playPreview(\''+c.id+'\',\''+c.preview_video_url+'\',\''+c.title+'\')">▶</button></div>':'')+'</div><div class="cc-body"><div class="cc-title">'+c.title+'</div>'+(c.title_urdu?'<div class="cc-urdu">'+c.title_urdu+'</div>':'')+'<div class="cc-teacher">Talat Mazhar</div><div class="cc-desc">'+c.description+'</div><div class="cc-meta">'+(c.duration?'<span>⏱ '+c.duration+'</span>':'')+(c.sessions?'<span>▶ '+c.sessions+'</span>':'')+'<span>🇵🇰 Urdu &amp; EN</span></div>'+(c.includes_vcall?'<div class="cc-vcall">Includes 1v1 Session</div>':'')+'<div class="cc-foot"><div class="cc-price-wrap"><div class="cc-price">PKR '+c.price.toLocaleString()+'</div>'+sp+'</div><button class="cc-enroll" onclick="openEnroll(\''+c.id+'\')"><span>Enroll →</span></button></div></div></div>';
+  });
+  grid.innerHTML=html;
+  document.querySelectorAll('.cc,.cc-feat').forEach(function(el){ro.observe(el);});
+  addH('.cc,.cc-enroll,.btn-gold,.btn-ghost,.cc-play-btn');addV('.cc-vis,.about-vis');
+  var fl=document.getElementById('ftLinks');if(fl){fl.innerHTML='<li><a href="#courses">All Courses</a></li>'+COURSES.filter(function(c){return c.status==='active';}).slice(0,4).map(function(c){return'<li><a href="#courses">'+c.title+'</a></li>';}).join('');}
+}
+function filt(f,btn){document.querySelectorAll('.fil').forEach(function(b){b.classList.remove('on');});if(btn)btn.classList.add('on');var g=document.getElementById('courseGrid');g.style.cssText='opacity:0;transition:opacity .28s';setTimeout(function(){renderCourses(f);g.style.cssText='opacity:1;transition:opacity .38s';},220);}
+
+/* ═══════════════════════ VIDEO PLAYER ═══════════════════════ */
+function playPreview(id,url,title){
+  document.getElementById('vidTitle').textContent=title+' — Free Preview';
+  document.getElementById('vidSrc').src=url;
+  var vp=document.getElementById('vidPlayer');vp.load();vp.play();
+  document.getElementById('vidList').innerHTML='<div style="padding:14px;color:var(--stone);font-size:12px;text-align:center">Free preview. Enroll to access all lessons.</div><div style="padding:12px;display:flex;justify-content:center"><button class="btn-gold" style="font-size:9px;padding:10px 20px" onclick="closeVidModal();openEnroll(\''+id+'\')"><span>Enroll for Full Access →</span></button></div>';
+  document.getElementById('vidModal').classList.add('on');document.body.style.overflow='hidden';
+}
+async function openCourseVideos(courseId,courseTitle){
+  if(!studentToken){showStuLogin();return;}
+  document.getElementById('vidTitle').textContent=courseTitle;
+  document.getElementById('vidModal').classList.add('on');document.body.style.overflow='hidden';
+  document.getElementById('vidList').innerHTML='<div style="padding:20px;text-align:center;color:var(--stone)">Loading lessons...</div>';
+  try{
+    var d=await api('/api/courses/'+courseId+'/videos');
+    var videos=d.videos||[];
+    if(!videos.length){document.getElementById('vidList').innerHTML='<div style="padding:20px;text-align:center;color:var(--stone)">No videos yet. Check back soon!</div>';return;}
+    document.getElementById('vidList').innerHTML=videos.map(function(v,i){return'<div class="vid-item'+(i===0?' active':'')+'" onclick="playVid(\''+v.video_url+'\',\''+v.title+'\',this)"><div class="vid-num">'+String(i+1).padStart(2,'0')+'</div><div class="vid-name">'+v.title+'</div><div class="vid-dur">'+(v.duration||'')+'</div></div>';}).join('');
+    if(videos[0])playVid(videos[0].video_url,videos[0].title,document.querySelector('.vid-item'));
+  }catch(e){document.getElementById('vidList').innerHTML='<div style="padding:20px;text-align:center;color:var(--stone)">Could not load videos. Please try again.</div>';}
+}
+function playVid(url,title,el){document.getElementById('vidTitle').textContent=title;document.getElementById('vidSrc').src=url;var vp=document.getElementById('vidPlayer');vp.load();vp.play();document.querySelectorAll('.vid-item').forEach(function(i){i.classList.remove('active');});if(el)el.classList.add('active');}
+function closeVidModal(){document.getElementById('vidModal').classList.remove('on');var vp=document.getElementById('vidPlayer');vp.pause();document.body.style.overflow='';}
+
+/* ═══════════════════════ ENROLL ═══════════════════════ */
+var enrollCrs=null,payMethod='whatsapp';
+function openEnroll(id){
+  enrollCrs=COURSES.find(function(c){return c.id==id;});if(!enrollCrs)return;
+  document.getElementById('emSym').textContent=catSym(enrollCrs.category);
+  document.getElementById('emTitle').textContent=enrollCrs.title;
+  document.getElementById('emPrice').textContent='PKR '+enrollCrs.price.toLocaleString();
+  document.getElementById('emVcall').style.display=enrollCrs.includes_vcall?'block':'none';
+  document.getElementById('enrollVeil').classList.add('on');document.body.style.overflow='hidden';
+  payMethod='whatsapp';document.getElementById('eWABtn').style.display='';document.getElementById('eStripeBtn').style.display='none';
+  document.getElementById('enrollErr').className='m-err';document.getElementById('enrollOk').className='m-ok';
+}
+function closeEnroll(){document.getElementById('enrollVeil').classList.remove('on');document.body.style.overflow='';}
+function selPay(m,el){payMethod=m;document.querySelectorAll('.m-pay-btn').forEach(function(b){b.classList.remove('on');});el.classList.add('on');if(m==='card'){document.getElementById('eStripeBtn').style.display='';document.getElementById('eWABtn').style.display='none';}else{document.getElementById('eStripeBtn').style.display='none';document.getElementById('eWABtn').style.display='';}}
+async function doEnrollWA(){
+  if(!enrollCrs)return;
+  var name=document.getElementById('emName').value.trim(),phone=document.getElementById('emPhone').value.trim(),email=document.getElementById('emEmail').value.trim();
+  try{
+    var d=await api('/api/enroll',{method:'POST',body:JSON.stringify({course_id:enrollCrs.id,name:name,email:email,phone:phone,payment_method:payMethod})});
+    document.getElementById('enrollOk').textContent='Received! Redirecting to WhatsApp...';document.getElementById('enrollOk').className='m-ok on';
+    setTimeout(function(){window.open(d.whatsapp_url,'_blank');closeEnroll();},800);
+  }catch(e){
+    var msg='Assalam%20o%20Alaikum%2C%0A%0AI%20would%20like%20to%20enroll%20in%3A%0A*'+encodeURIComponent(enrollCrs.title)+'*%0APrice%3A%20PKR%20'+enrollCrs.price.toLocaleString()+(enrollCrs.includes_vcall?'%0A%E2%97%89%20Includes%201v1%20session':'')+('%0A%0AName%3A%20'+encodeURIComponent(name||'Not provided'))+'%0APhone%3A%20'+encodeURIComponent(phone||'Not provided');
+    window.open('https://wa.me/'+CFG.WA+'?text='+msg,'_blank');closeEnroll();
+  }
+}
+async function doEnrollStripe(){
+  if(!enrollCrs)return;
+  var email=document.getElementById('emEmail').value.trim();
+  if(!email){document.getElementById('enrollErr').textContent='Email required for card payment.';document.getElementById('enrollErr').className='m-err on';return;}
+  document.getElementById('eStripeBtn').querySelector('span').textContent='Creating checkout...';
+  try{
+    var d=await api('/api/payment/stripe/checkout',{method:'POST',body:JSON.stringify({course_id:enrollCrs.id,name:document.getElementById('emName').value.trim(),email:email,phone:document.getElementById('emPhone').value.trim()})});
+    window.location.href=d.url;
+  }catch(e){document.getElementById('enrollErr').textContent='Card checkout unavailable. Please use WhatsApp.';document.getElementById('enrollErr').className='m-err on';document.getElementById('eStripeBtn').querySelector('span').textContent='Pay with Card →';}
+}
+(function(){var p=new URLSearchParams(window.location.search);if(p.get('payment')==='success'){setTimeout(function(){alert('JazakAllah Khair! Your payment was successful. You will receive a WhatsApp message within 24 hours with your course access details.');window.history.replaceState({},'',window.location.pathname);},2000);}})();
+
+/* ═══════════════════════ CONTACT ═══════════════════════ */
+function sendMsg(){var n=document.getElementById('fn').value.trim(),m=document.getElementById('fm').value.trim();if(!n||!m)return;window.open('https://wa.me/'+CFG.WA+'?text=Assalam%20o%20Alaikum%20Talat%20Sahib%2C%0AName%3A%20'+encodeURIComponent(n)+'%0AMessage%3A%20'+encodeURIComponent(m),'_blank');}
+
+/* ═══════════════════════ STUDENT AUTH ═══════════════════════ */
+function handleStuNav(){if(studentToken&&studentData)openStuDash();else showStuLogin();}
+function showStuLogin(){document.getElementById('stuLoginVeil').classList.add('on');document.body.style.overflow='hidden';}
+function closeStuLogin(){document.getElementById('stuLoginVeil').classList.remove('on');document.body.style.overflow='';}
+async function stuLogin(){
+  var email=document.getElementById('stuEmail').value.trim(),pw=document.getElementById('stuPw').value;
+  var errEl=document.getElementById('stuErr');
+  try{
+    var d=await api('/api/auth/login',{method:'POST',body:JSON.stringify({email:email,password:pw})});
+    studentToken=d.token;studentData=d.student;
+    localStorage.setItem('tm_student_token',studentToken);localStorage.setItem('tm_student_data',JSON.stringify(studentData));
+    closeStuLogin();updateNavStu();openStuDash();
+  }catch(e){errEl.textContent=e.message||'Login failed. Please check your credentials.';errEl.className='m-err on';}
+}
+function updateNavStu(){var btn=document.getElementById('navStuBtn');if(studentData){btn.textContent=studentData.name.split(' ')[0]+' ☽';btn.className='nav-btn stu active-stu';}else{btn.textContent='Student Login';btn.className='nav-btn stu';}}
+function openStuDash(){if(!studentData)return;document.getElementById('stuDashName').textContent=studentData.name;document.getElementById('stuDashVeil').classList.add('on');document.body.style.overflow='hidden';loadStuContent();}
+async function loadStuContent(){
+  var c=document.getElementById('stuDashContent');c.innerHTML='<div style="padding:20px;text-align:center;color:var(--stone)">Loading your courses...</div>';
+  try{
+    var d=await api('/api/me');var enrollments=d.enrollments||[];
+    if(!enrollments.length){c.innerHTML='<div style="padding:20px;color:var(--stone);font-size:13px;line-height:1.8">Not yet enrolled in any courses.<br><br><a href="#courses" style="color:var(--gold)" onclick="closeStuDash()">Browse Courses →</a></div>';return;}
+    c.innerHTML=enrollments.map(function(en){var crs=en.courses;return'<div style="padding:18px;background:rgba(248,244,255,.03);border:1px solid rgba(78,62,150,.15);margin-bottom:10px"><div style="font-family:\'Cormorant Garamond\',serif;font-size:18px;color:var(--star);margin-bottom:4px">'+(crs?crs.title:'Course')+'</div><div style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:'+(en.status==='active'?'var(--jade)':'var(--gold)')+'">'+en.status+'</div>'+(en.status==='active'?'<button onclick="openCourseVideos(\''+(crs?crs.id:'')+'\',\''+(crs?crs.title:'')+'\');closeStuDash();" class="btn-vio" style="margin-top:12px;font-size:9px;padding:10px 20px"><span>Watch Lessons →</span></button>':'<div style="font-size:12px;color:var(--ash);margin-top:8px">Awaiting payment approval</div>')+'</div>';}).join('')+'<div style="margin-top:16px"><a href="https://wa.me/'+CFG.WA+'" target="_blank" class="btn-gold" style="display:inline-flex;font-size:9px;padding:10px 22px"><span>Contact Talat Sahib</span><span>→</span></a></div>';
+  }catch(e){c.innerHTML='<div style="color:var(--stone);font-size:13px">Could not load courses. Please refresh or contact support.</div>';}
+}
+function closeStuDash(){document.getElementById('stuDashVeil').classList.remove('on');document.body.style.overflow='';}
+function stuLogout(){studentToken=null;studentData=null;localStorage.removeItem('tm_student_token');localStorage.removeItem('tm_student_data');closeStuDash();updateNavStu();}
+
+/* ═══════════════════════ NOOR AI ═══════════════════════ */
+var NOOR_LIMIT=10,noorUsed=0;try{noorUsed=parseInt(localStorage.getItem('tm_noor')||'0')||0;}catch(e){}
+var guideOpen=false,nHist=[];
+function getNRem(){return Math.max(0,NOOR_LIMIT-noorUsed);}
+function updateNoorUI(){var rem=getNRem();var el=document.getElementById('noorLimTxt');if(el)el.textContent=rem;var warn=document.getElementById('noorWarn'),inpRow=document.getElementById('gpInpRow'),quick=document.getElementById('gpQ');if(rem<=0){if(warn)warn.classList.add('on');if(inpRow)inpRow.style.display='none';if(quick)quick.style.display='none';}else{if(warn)warn.classList.remove('on');if(inpRow)inpRow.style.display='flex';if(quick)quick.style.display='flex';}}
+function toggleGuide(){guideOpen=!guideOpen;var fab=document.getElementById('guideFab'),panel=document.getElementById('guidePanel');fab.classList.toggle('on',guideOpen);panel.classList.toggle('on',guideOpen);fab.textContent=guideOpen?'✕':'☽';updateNoorUI();}
+function openGuide(){guideOpen=true;document.getElementById('guideFab').classList.add('on');document.getElementById('guidePanel').classList.add('on');document.getElementById('guideFab').textContent='✕';updateNoorUI();}
+function qSend(msg){if(getNRem()<=0)return;document.getElementById('gpInp').value=msg;noorSend();}
+var NSYS=function(){return'You are Noor — AI spiritual companion for Talat Mazhar Spiritual Sciences.\n\nPERSONA: Deeply wise, warm, poetic. You speak like a trusted spiritual elder. You draw from Rumi, Ibn Arabi, Quran, Hadith, and wisdom traditions. You are spiritual guide, course consultant, sales advisor, and compassionate companion.\n\nROLES:\n1. SPIRITUAL COMPANION — Engage deeply with Sufism, fana/baqa, dhikr, nafs, Quran, eschatology, comparative religion, vibration & frequency, dream interpretation, healing. Give real, deep answers.\n2. COURSE ADVISOR — Recommend the right course based on the seeker\'s questions and spiritual stage.\n3. SALES MANAGER — All prices, packages, what\'s included. Guide enrollment naturally.\n4. 1v1 SESSIONS — Private WhatsApp video calls with Talat Sahib: 30min PKR 3,500 | 60min PKR 6,000 | 90min PKR 8,500.\n\nCOURSES:\n'+COURSES.filter(function(c){return c.status==='active';}).map(function(c){return'- '+c.title+(c.title_urdu?' / '+c.title_urdu:'')+' | '+catLbl(c.category)+' | PKR '+c.price.toLocaleString()+(c.original_price?' (was PKR '+c.original_price.toLocaleString()+')':'')+' | '+(c.duration||'')+' | '+(c.includes_vcall?'Includes 1v1 WhatsApp call | ':'')+c.description;}).join('\n')+'\n\nPAYMENT: JazzCash, EasyPaisa, bank transfer, or Stripe (card). All confirmed via WhatsApp.\n\nLANGUAGE: Reply in the same language as the student — Urdu or English. If Urdu, write in proper Urdu script.\n\nSTYLE: Full, unhurried answers. Occasional Arabic phrases naturally. Share wisdom generously. Recommend enrollment only when the student\'s need is clear.';};
+async function noorSend(){
+  if(getNRem()<=0){updateNoorUI();return;}
+  var inp=document.getElementById('gpInp'),msg=inp.value.trim();if(!msg)return;inp.value='';
+  appendNoor('user',msg);nHist.push({role:'user',content:msg});noorTyping(true);
+  noorUsed++;try{localStorage.setItem('tm_noor',String(noorUsed));}catch(e){}updateNoorUI();
+  try{
+    var r=await fetch(CFG.API+'/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,history:nHist.slice(-14),system:NSYS()})});
+    if(!r.ok)throw new Error(r.status);
+    var d=await r.json();var rep=d.reply||nFallback(msg);
+    noorTyping(false);appendNoor('ai',rep);nHist.push({role:'assistant',content:rep});
+  }catch(e){noorTyping(false);appendNoor('ai',nFallback(msg));}
+}
+function appendNoor(role,text){var c=document.getElementById('gpMsgs');var d=document.createElement('div');d.className='nm '+(role==='user'?'u':'a');var l=document.createElement('div');l.className='nml';l.textContent=role==='user'?'You':'Noor';var b=document.createElement('div');b.className='nmb';b.textContent=text;d.appendChild(l);d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function noorTyping(s){document.getElementById('gpTyping').classList.toggle('on',s);document.getElementById('gpMsgs').scrollTop=99999;}
+function nFallback(m){
+  var ml=m.toLowerCase();
+  if(/fana|baqa|annihilation/.test(ml))return'Fana is the dissolving of the ego-self in the Divine — the burning away of all that is not God. Baqa is what subsists: presence in God after the ego has burned away. Ibn Arabi described it as the polished mirror showing only the Beloved. Talat Sahib explores this deeply in The Secrets of Rumi.';
+  if(/price|cost|how much|fee|قیمت/.test(ml))return'Our courses: Introduction to Sufi Meditation PKR 2,800 | The Secrets of Rumi PKR 4,500 | Sacred Numerology PKR 3,200 | Spiritual Healing PKR 5,800 | Eschatology PKR 4,200 | Comparative Religion PKR 3,800 | Vibration & Frequency PKR 3,500. 1v1 sessions: 30min PKR 3,500 | 60min PKR 6,000 | 90min PKR 8,500.';
+  if(/begin|start|new|first|where|کہاں|شروع/.test(ml))return'Bismillah. For those new to the path, Talat Sahib always recommends the Introduction to Sufi Meditation (PKR 2,800). Before knowledge can take root, the mind must learn stillness. That is the first teaching of every tradition.';
+  if(/1v1|session|private|call|video|نشست/.test(ml))return'Private sessions with Talat Sahib are via WhatsApp video call. Three packages: 30 minutes (PKR 3,500) for one focused question; 60 minutes (PKR 6,000) for deep guidance; 90 minutes (PKR 8,500) for comprehensive spiritual consultation. Payment via JazzCash, EasyPaisa, bank transfer, or card.';
+  if(/rumi|masnavi|دیوان/.test(ml))return'"The Secrets of Rumi" — 10 weeks through the Masnavi and Divan-e-Shams. Not literature, but living spiritual instruction. PKR 4,500 (was 6,000). Talat Sahib has studied these texts for over 30 years.';
+  if(/اردو|urdu/.test(ml))return'جی ضرور — میں اردو میں آپ کی مدد کر سکتی ہوں۔ آپ کونسا سوال پوچھنا چاہتے ہیں؟ کورسز، قیمتیں، یا روحانی علوم کے بارے میں پوچھ سکتے ہیں۔';
+  return'I am here with you on this path. Your question carries sincerity and deserves a full answer. Please try again in a moment, or reach Talat Sahib directly via WhatsApp.';
+}
+
+/* ═══════════════════════ ADMIN ═══════════════════════ */
+var admLoggedIn=false,editMode=false;
+function openAdmin(){document.getElementById('adminVeil').classList.add('on');document.body.style.overflow='hidden';}
+function closeAdmin(){document.getElementById('adminVeil').classList.remove('on');document.body.style.overflow='';}
+async function admLogin(){
+  var pw=document.getElementById('admPw').value;
+  try{var d=await fetch(CFG.API+'/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pw})});var r=await d.json();if(d.ok&&r.token){adminToken=r.token;sessionStorage.setItem('tm_admin_token',adminToken);admLoggedIn=true;showAdmMain();return;}}catch(e){}
+  var stored=localStorage.getItem('tm_ap')||CFG.ADMIN_PASS;
+  if(pw===stored||pw===CFG.ADMIN_PASS){admLoggedIn=true;adminToken='local';showAdmMain();}
+  else{var err=document.getElementById('admErr');err.classList.add('on');setTimeout(function(){err.classList.remove('on');},2200);}
+}
+function showAdmMain(){document.getElementById('admGate').style.display='none';document.getElementById('admMain').style.display='block';renderAdmDash();renderAdmCourses();loadStudents();loadRevenue();checkAPI();}
+async function checkAPI(){var el=document.getElementById('apiStat');if(!el)return;try{await fetch(CFG.API+'/api/health');el.textContent='Online ✓';el.style.color='var(--jade)';}catch(e){el.textContent='Offline — local data';el.style.color='rgba(192,56,40,.9)';}}
+function admTab(t,btn){document.querySelectorAll('.adm-tab').forEach(function(b){b.classList.remove('on');});document.querySelectorAll('.adm-sec').forEach(function(s){s.classList.remove('on');});btn.classList.add('on');document.getElementById('adm-'+t).classList.add('on');}
+function renderAdmDash(){var active=COURSES.filter(function(c){return c.status==='active';}).length;document.getElementById('admStats').innerHTML='<div class="ast"><div class="ast-n">'+active+'</div><div class="ast-l">Active Courses</div></div><div class="ast"><div class="ast-n">'+COURSES.filter(function(c){return c.status==='draft';}).length+'</div><div class="ast-l">Drafts</div></div><div class="ast"><div class="ast-n" id="admStuN">—</div><div class="ast-l">Total Students</div></div><div class="ast"><div class="ast-n" id="admRevN">—</div><div class="ast-l">Revenue</div></div>';}
+function renderAdmCourses(){var el=document.getElementById('admCrsList');el.innerHTML=COURSES.map(function(c){return'<div class="adm-row"><div><div class="ar-name">'+c.title+'</div><div class="ar-cat">'+catLbl(c.category)+(c.includes_vcall?' · 1v1':'')+'</div></div><div class="ar-price">PKR '+c.price.toLocaleString()+'</div><div class="ar-status '+(c.status||'active')+'">'+c.status+'</div><div class="ar-btns"><button class="ar-btn edit" onclick="editCourse(\''+c.id+'\')">Edit</button><button class="ar-btn del" onclick="delCourse(\''+c.id+'\')">Delete</button></div></div>';}).join('');}
+function editCourse(id){var c=COURSES.find(function(x){return x.id==id;});if(!c)return;editMode=true;document.getElementById('editId').value=id;document.getElementById('fTitle').value=c.title||'';document.getElementById('fTitleU').value=c.title_urdu||'';document.getElementById('fCat').value=c.category||'sufism';document.getElementById('fPrice').value=c.price||'';document.getElementById('fOrig').value=c.original_price||'';document.getElementById('fDur').value=c.duration||'';document.getElementById('fSess').value=c.sessions||'';document.getElementById('fDesc').value=c.description||'';document.getElementById('fDescU').value=c.description_urdu||'';document.getElementById('fBadge').value=c.badge||'';document.getElementById('fStatus').value=c.status||'active';document.getElementById('fVcall').value=c.includes_vcall?'true':'false';document.getElementById('fSort').value=c.sort_order||0;document.getElementById('fImg').value=c.image_url||'';document.getElementById('fPrevVid').value=c.preview_video_url||'';document.getElementById('fIncludes').value=(c.includes||[]).join('\n');document.getElementById('saveLbl').textContent='Update Course';document.querySelectorAll('.adm-tab').forEach(function(b){b.classList.remove('on');});document.querySelectorAll('.adm-sec').forEach(function(s){s.classList.remove('on');});document.getElementById('addTabBtn').classList.add('on');document.getElementById('adm-add').classList.add('on');}
+async function delCourse(id){if(!confirm('Delete this course?'))return;try{await adminAPI('/api/admin/courses/'+id,{method:'DELETE'});}catch(e){}COURSES=COURSES.filter(function(c){return c.id!=id;});renderAdmCourses();renderAdmDash();renderCourses('all');showMsg('crsMsg','Deleted.','ok');}
+async function saveCourseAdm(){
+  var title=document.getElementById('fTitle').value.trim(),price=parseInt(document.getElementById('fPrice').value);
+  if(!title||isNaN(price)){showMsg('formMsg','Title and price required.','err');return;}
+  var crs={title:title,title_urdu:document.getElementById('fTitleU').value.trim(),category:document.getElementById('fCat').value,price:price,original_price:parseInt(document.getElementById('fOrig').value)||null,duration:document.getElementById('fDur').value.trim(),sessions:document.getElementById('fSess').value.trim(),description:document.getElementById('fDesc').value.trim(),description_urdu:document.getElementById('fDescU').value.trim(),badge:document.getElementById('fBadge').value,status:document.getElementById('fStatus').value,includes_vcall:document.getElementById('fVcall').value==='true',sort_order:parseInt(document.getElementById('fSort').value)||0,image_url:document.getElementById('fImg').value.trim(),preview_video_url:document.getElementById('fPrevVid').value.trim(),includes:document.getElementById('fIncludes').value.split('\n').map(function(s){return s.trim();}).filter(Boolean)};
+  var eid=document.getElementById('editId').value;
+  try{if(editMode&&eid){await adminAPI('/api/admin/courses/'+eid,{method:'PUT',body:JSON.stringify(crs)});COURSES=COURSES.map(function(c){return c.id==eid?Object.assign(crs,{id:eid}):c;});}else{var d=await adminAPI('/api/admin/courses',{method:'POST',body:JSON.stringify(crs)});COURSES.push(d.course||Object.assign(crs,{id:'n_'+Date.now()}));}}
+  catch(e){if(editMode&&eid){COURSES=COURSES.map(function(c){return c.id==eid?Object.assign(crs,{id:eid}):c;});}else{COURSES.push(Object.assign(crs,{id:'l_'+Date.now()}));}}
+  renderAdmCourses();renderAdmDash();renderCourses('all');showMsg('formMsg',editMode?'Updated.':'Added.','ok');resetForm();
+}
+function resetForm(){editMode=false;document.getElementById('editId').value='';['fTitle','fTitleU','fPrice','fOrig','fDur','fSess','fDesc','fDescU','fImg','fPrevVid','fIncludes'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('fCat').value='sufism';document.getElementById('fBadge').value='';document.getElementById('fStatus').value='active';document.getElementById('fVcall').value='false';document.getElementById('fSort').value='0';document.getElementById('saveLbl').textContent='Save Course';}
+async function loadStudents(){
+  var el=document.getElementById('admStuList');
+  try{var d=await adminAPI('/api/admin/students');var stus=d.students||[];var cnt=document.getElementById('admStuN');if(cnt)cnt.textContent=stus.length;el.innerHTML=stus.length?stus.map(function(s){return'<div class="adm-row"><div><div class="ar-name">'+(s.student_name||'Unknown')+'</div><div class="ar-cat">'+(s.student_email||s.student_phone||'')+'</div></div><div style="font-size:12px;color:var(--mist);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px">'+(s.courses?s.courses.title:'—')+'</div><div class="ar-status '+(s.status||'pending')+'">'+s.status+'</div><div class="ar-btns"><button class="ar-btn approve" onclick="approveEnroll(\''+s.id+'\')">Approve</button><button class="ar-btn reject" onclick="rejectEnroll(\''+s.id+'\')">Reject</button></div></div>';}).join(''):'<div style="color:var(--ash);font-size:12px;padding:20px">No enrollment requests yet.</div>';}
+  catch(e){el.innerHTML='<div style="color:var(--ash);padding:20px;font-size:12px">Could not load students. API may be offline.</div>';}
+}
+async function approveEnroll(id){try{var d=await adminAPI('/api/admin/enrollments/'+id+'/approve',{method:'PUT'});showMsg('stuMsg','Approved! Opening WhatsApp...','ok');if(d.whatsapp_notify)setTimeout(function(){window.open(d.whatsapp_notify,'_blank');},600);loadStudents();loadRevenue();}catch(e){showMsg('stuMsg','Error: '+e.message,'err');}}
+async function rejectEnroll(id){if(!confirm('Reject this enrollment?'))return;try{await adminAPI('/api/admin/enrollments/'+id+'/reject',{method:'PUT'});loadStudents();showMsg('stuMsg','Rejected.','ok');}catch(e){showMsg('stuMsg','Error: '+e.message,'err');}}
+async function loadRevenue(){try{var d=await adminAPI('/api/admin/revenue');var rt=document.getElementById('admRevN');if(rt)rt.textContent='PKR '+(d.total||0).toLocaleString();document.getElementById('revCards').innerHTML='<div class="rev-c"><div class="rev-n">PKR '+(d.total||0).toLocaleString()+'</div><div class="rev-l">Total Revenue</div></div><div class="rev-c"><div class="rev-n">PKR '+(d.course_revenue||0).toLocaleString()+'</div><div class="rev-l">Course Revenue</div></div><div class="rev-c"><div class="rev-n">'+(d.active_students||0)+'</div><div class="rev-l">Paid Students</div></div>';var pc=d.per_course||{};document.getElementById('revList').innerHTML=Object.keys(pc).map(function(k){return'<div class="adm-row"><div class="ar-name">'+k+'</div><div class="ar-price">PKR '+pc[k].toLocaleString()+'</div></div>';}).join('');}catch(e){}}
+function updateAnn(){var text=document.getElementById('annText').value.trim();if(!text)return;var ann=document.getElementById('ann');if(ann)ann.innerHTML=text+' &nbsp;·&nbsp; <a href="#courses">Enroll Now →</a>';alert('Announcement updated!');}
+async function sendBroadcast(){var msg=document.getElementById('broadMsg').value.trim();if(!msg)return;var target=document.getElementById('broadTarget').value;try{var d=await adminAPI('/api/admin/broadcast',{method:'POST',body:JSON.stringify({message:msg,target:target})});alert('Broadcast ready for '+d.recipient_count+' students.');d.links.forEach(function(l,i){setTimeout(function(){window.open(l,'_blank');},i*1200);});}catch(e){alert('Broadcast requires the API to be online.');}}
+function saveSettings(){var wa=document.getElementById('sWA').value.trim(),apiUrl=document.getElementById('sAPI').value.trim(),np=document.getElementById('sNewPw').value,cp=document.getElementById('sConfPw').value;if(wa)CFG.WA=wa.replace(/\D/g,'');if(apiUrl)CFG.API=apiUrl;if(np){if(np!==cp){alert('Passwords do not match.');return;}localStorage.setItem('tm_ap',np);CFG.ADMIN_PASS=np;}saveCFG();updateWALinks();alert('Settings saved!');}
+function showMsg(id,text,type){var el=document.getElementById(id);if(!el)return;el.textContent=text;el.className='adm-msg '+type;setTimeout(function(){el.className='adm-msg';},3000);}
+
+/* ═══════════════════════ INIT ═══════════════════════ */
+updateWALinks();
+updateNoorUI();
+renderVcall();
+loadCourses();
+if(studentData)updateNavStu();
+</script>
+</body>
+</html>
